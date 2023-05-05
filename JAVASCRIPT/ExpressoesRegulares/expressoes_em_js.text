@@ -1,0 +1,64 @@
+Método	      Descrição	E
+
+⁡⁣⁢⁢test()⁡	           ⁡⁢⁢⁢ Retorna um valor booleano que indica se uma string contém uma correspondência com a expressão regular fornecida.	
+/hello/.test("Hello world!"); // true⁡
+
+⁡⁣⁢⁢exec()	⁡           ⁡⁢⁢⁢Retorna um array que contém detalhes sobre a primeira corres⁡⁢⁢⁢pondência encontrada na string.⁡	
+⁡⁣⁣⁢/hello/.exec("Hello world!"); ⁡⁣⁢⁣// ["hello", index: 0, input: "Hello world!", groups: undefined]⁡⁡
+
+⁡⁣⁢⁢match()⁡	        ⁡⁢⁢⁢Retorna um array contendo todas as correspondências⁡⁢⁢⁢ encontradas na string.	⁡
+⁡⁣⁣⁢"Hello world! Hello again!".match(/hello/g); ⁡⁣⁢⁣// ["hello", "hello"]⁡⁡
+
+⁡⁣⁢⁢replace()⁡	         ⁡⁢⁢⁢Substitui a primeira correspondência encontrada na string por uma nova substring⁡.	
+⁡⁣⁣⁢"Hello world!".replace(/hello/, "hi"); ⁡⁣⁢⁣// "Hi world!"⁡
+⁡
+⁡⁣⁢⁢replaceAll()⁡	⁡⁢⁢⁢Substitui todas as correspondências encontradas na string por uma nova substring⁡.	
+⁡⁣⁣⁢"Hello world! Hello again!".replaceAll(/hello/g, "hi");⁡ ⁡⁣⁢⁣// "Hi world! Hi again!"⁡
+
+⁡⁣⁢⁢search()⁡	    ⁡⁢⁢⁢Retorna o índice da primeira correspondên⁡⁢⁢⁢cia encontrada na string.	
+"Hello world!".search(/world/); // 6⁡⁡
+
+⁡⁣⁢⁢split()⁡	      ⁡⁢⁢⁢Divide a string em um array de substrings com base na correspondênci⁡⁢⁢⁢a com a expressão regular.	⁡
+⁡⁣⁣⁢"apple, banana, cherry".split(/,\s*/);⁡ ⁡⁣⁢⁣// ["apple", "banana", "cherry"]⁡
+
+⁡⁣⁢⁢toString()⁡	  ⁡⁢⁢⁢Retorna a expressão regular como uma string⁡.	
+⁡⁣⁣⁢/hello/.toString();⁡ ⁡⁣⁢⁣// "/hello/"⁡
+
+⁡⁣⁢⁢toLocaleString()⁡	⁡⁢⁢⁢Retorna a expressão regular como uma string formatada de acordo com o local⁡.	
+⁡⁣⁣⁢/hello/.toLocaleString();⁡ ⁡⁣⁢⁣// "/hello/"
+⁡
+⁡⁣⁢⁢valueOf()⁡	⁡⁢⁢⁢Retorna a expressão regular como um objeto primitivo⁡.	
+⁡⁣⁣⁢/hello/.valueOf();⁡ ⁡⁣⁢⁣// /hello/
+⁡
+⁡⁣⁢⁢matchAll()⁡	⁡⁢⁢⁢Retorna um objeto iterator contendo todas as correspondências encontradas na string⁡.	
+⁡⁣⁣⁢"Hello world! Hello again!".matchAll(/hello/g);⁡ ⁡⁣⁢⁣// [iterator object]⁡
+
+⁡⁣⁢⁢compile()⁡	⁡⁢⁢⁢Compila uma expressão regular em um objeto RegExp⁡.	
+⁡⁣⁣⁢let regex = /hello/; regex.compile();⁡
+
+⁡⁣⁢⁢slice()⁡	⁡⁢⁢⁢Retorna uma parte da string com base nas posições inicial e final.⁡	
+⁡⁣⁣⁢"Hello world!".slice(6, 11);⁡ ⁡⁣⁢⁣// "world"⁡
+
+⁡⁣⁢⁢substring()⁡	⁡⁢⁢⁢Retorna uma parte da string com base nas posições inicial e final.⁡	
+⁡⁣⁣⁢"Hello world!".substring(6, 11);⁡ ⁡⁣⁢⁣// "world"⁡
+
+⁡⁣⁢⁢substr()⁡	⁡⁢⁢⁢Retorna uma parte da string com base na posição inicial e no comprimento.⁡	
+⁡⁣⁣⁢"Hello world!".substr(6, 5);⁡ ⁡⁣⁢⁣// ⁡⁣⁢⁣"world"⁡
+
+⁡⁣⁢⁢ch⁡⁣⁢⁢arAt()	⁡⁢⁢⁢Retorna o caractere na posição especificada na string.⁡	
+⁡⁣⁣⁢"Hello world!".charAt(6);⁡ ⁡⁣⁢⁣// "w"⁡
+
+⁡⁣⁢⁢charCodeAt()⁡	⁡⁢⁢⁢Retorna o valor Unicode do caractere na posição especificada na string.⁡	
+⁡⁣⁣⁢"Hello world!".charCodeAt(6);⁡⁣⁢⁣ // 119⁡
+
+⁡⁣⁢⁢concat()⁡	⁡⁢⁢⁢Concatena duas ou mais strings⁡.	
+⁡⁣⁣⁢"Hello".concat(" ", "world!");⁡ ⁡⁣⁢⁣// "Hello world!"
+⁡
+⁡⁣⁢⁢includes()⁡	⁡⁢⁢⁢Retorna um valor booleano que indica se a string contém a substring fornecida⁡.	
+⁡⁣⁣⁢"Hello world!".includes("world");⁡ ⁡⁣⁢⁣// true
+⁡
+⁡⁣⁢⁢startsWith()⁡	⁡⁢⁢⁢Retorna um valor booleano que indica se a string começa com a substring fornecida.⁡	
+⁡⁣⁣⁢"Hello world!".startsWith("Hello");⁡ ⁡⁣⁢⁣// true
+⁡
+⁡⁣⁢⁢endsWith()⁡⁢⁢⁢	Retorna um valor booleano que indica se a string termina com a substring fornecida⁡
+⁡⁣⁣⁢"Hello world!".endsWith("world!");⁡ ⁡⁣⁢⁣// true⁡

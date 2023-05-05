@@ -1,0 +1,363 @@
+Antes de tudo, vamos conhecer os principais metacaracteres:
+⁡⁢⁣⁣.    ?    *    +    ^    $    |    [ ]    { }    ( )    \
+
+
+⁡⁢⁣⁣AS EXPRESSÕES REGULARES PODEM SER DECLARADAS DE DUAS FORMAS
+- FORMA LINEAR
+- USANDO A INSTANCIAÇÃO DO RegExxp
+
+- FORMA LINEAR
+⁡⁣⁣⁢const regex1 = /[A-Z]/g;
+⁡
+⁡⁢⁣⁣- USANDO A INSTANCIAÇÃO DO RegExxp
+⁡⁣⁣⁢const regex2 = new RegExp("[A-Z]", "g")
+
+⁡⁣⁢⁣​‌‌‍‍FLAG'S​
+⁡
+g	Procura todas as correspondências em vez de apenas a primeira.
+i	Ignora maiúsculas e minúsculas.
+m	Multilinha: altera o comportamento de "^" e "$" para que correspondam ao início e fim de cada linha em vez do início e fim da string inteira.
+s	Dotall: permite que "." corresponda a caracteres de quebra de linha.
+u	Unicode: habilita o tratamento de caracteres Unicode em pares de surrogates.
+y	Sticky: corresponde apenas se a expressão regular começa no índice especificado.⁡
+d	Named capture groups: habilita o uso de grupos nomeados em vez de numéricos.
+x	Ignora espaços em branco e permite comentários dentro da expressão regular.
+
+
+⁡⁢⁣⁢Importante:⁡ Definem um padrão (pattern) para casar (match) em um texto.
+
+        .               Ponto
+        [ ]             Lista
+        [^]             Lista Negada
+        ?               Opcional
+        *               Asterisco
+        +               Mais
+        { }             Chaves
+        ^               Circunflexo
+        $               Cifrão
+        \b              Borda
+        \               Escape
+        |               Ou
+        ( )             Grupo
+        \1              Retrovisor
+
+
+
+⁡⁣⁢⁢SITES PARA VALIDAÇÃO DAS EXPRSSÕES⁡
+⁡⁢⁢⁢https://regex101.com
+https://www.regexpal.com⁡
+
+
+Existem vários motores de interpretação regex:
+
+Motor de interpretação regex	Linguagem de programação	Compatibilidade
+PCRE	                        C, PHP, R	                Muito alta
+Java regex	                    Java	                    Alta
+Python regex	                Python	                    Muito alta
+.NET regex	                    C#, VB.NET	                Muito alta
+Ruby regex	                    Ruby	                    Muito alta
+JavaScript regex	            JavaScript	                Muito alta
+Perl regex	                    Perl	                    Muito alta
+
+⁡⁣⁢⁡⁣⁢⁢Muito alta⁡ significa que o motor é totalmente compatível com a linguagem e suas funcionalidades.
+⁡⁣⁢⁢Alta⁡ significa que a compatibilidade é boa, mas pode haver algumas diferenças
+⁡
+
+⁡⁢⁣⁣​‌‌‍𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝗿𝗲𝗴𝗲𝘅 :
+
+​Metacaractere	Descrição
+.	                        Corresponde a qualquer caractere, exceto nova linha
+\d	                        Corresponde a um dígito (0-9)
+\D	                        Corresponde a qualquer caractere que não seja um dígito
+\w	                        Corresponde a qualquer caractere alfanumérico, incluindo sublinhados
+\W	                        Corresponde a qualquer caractere que não seja alfanumérico
+\s	                        Corresponde a um caractere de espaço em branco (espaço, tabulação, quebra de linha, etc.)
+\S	                        Corresponde a qualquer caractere que não seja um espaço em branco
+^	                        Corresponde ao início da string
+$	                        Corresponde ao final da string
+*	                        Corresponde a zero ou mais ocorrências do caractere anterior
++	                        Corresponde a uma ou mais ocorrências do caractere anterior
+?	                        Torna o caractere anterior opcional (corresponde a zero ou uma ocorrência)
+*?                          Torna o caractere anterior opcional (corresponde a zero ou uma ocorrência) de forma não-gulosa, ou seja, o menor número possível de ocorrências será correspondido.
++?                          Corresponde a uma ou mais ocorrências do caractere anterior de forma não-gulosa.
+??                          Torna o caractere anterior opcional (corresponde a zero ou uma ocorrência) de forma não-gulosa.
+{n}	                        Corresponde exatamente a n ocorrências do caractere anterior
+{n,}	                    Corresponde a pelo menos n ocorrências do caractere anterior
+{n,m}	                    Corresponde a pelo menos n e no máximo m ocorrências do caractere anterior
+{n,m}?                      Corresponde a pelo menos n e no máximo m ocorrências do caractere anterior de forma não-gulosa.
+()	                        Agrupa caracteres em uma expressão
+[]	                        Corresponde a qualquer caractere dentro dos colchetes. Por exemplo, [abc] corresponde a "a", "b" ou "c".
+[^]	                        Corresponde a qualquer caractere que NÃO esteja dentro dos colchetes. Por exemplo, [^abc] corresponde a qualquer caractere que não seja "a", "b" ou "c".
+|	                        Corresponde a uma das expressões alternativas. Por exemplo, a
+()	                        Captura o padrão correspondente para uso posterior e cria um grupo de captura. Por exemplo, (abc) captura "abc" e cria um grupo de captura.
+(?:)	                    Cria um grupo de não-captura. O padrão correspondente não é capturado para uso posterior. Por exemplo, (?:abc) corresponde a "abc", mas não cria um grupo de captura.
+(?=)	                    Corresponde a uma expressão seguida por outra expressão sem incluir a segunda expressão na correspondência. Por exemplo, abc(?=def) corresponde a "abc" somente se for seguido por "def".
+(?!)	                    Corresponde a uma expressão que NÃO é seguida por outra expressão sem incluir a segunda expressão na correspondência. Por exemplo, abc(?!def) corresponde a "abc" somente se não for seguido por "def".
+\b	                        Corresponde a um limite de palavra. Por exemplo, \bcat\b corresponde a "cat" somente se estiver cercado por limites de palavra (espaço em branco, pontuação, etc.).
+\B	                        Corresponde a um não-limite de palavra. Por exemplo, \Bcat\B corresponde a "cat" somente se NÃO estiver cercado por limites de palavra.⁡
+⁡⁢⁣⁣\                           Usado para escapar de caracteres especiais, permitindo que eles sejam interpretados como caracteres literais. Por exemplo, . corresponde a "." em vez de corresponder a qualquer caractere.
+\d+                         Corresponde a uma ou mais ocorrências de dígitos (0-9).
+\D+                         Corresponde a uma ou mais ocorrências de qualquer caractere que não seja um dígito.
+\w+                         Corresponde a uma ou mais ocorrências de caracteres alfanuméricos, incluindo sublinhados.
+\W+                         Corresponde a uma ou mais ocorrências de qualquer caractere que não seja alfanumérico.
+\s+                         Corresponde a uma ou mais ocorrências de um caractere de espaço em branco (espaço, tabulação, quebra de linha, etc.).
+\S+                         Corresponde a uma ou mais ocorrências de qualquer caractere que não seja um espaço em branco.
+(a|b)                       Corresponde a "a" ou "b".
+\1, \2, etc.                Usado dentro de uma expressão regular para fazer referência a grupos de captura anteriores. Por exemplo, (\d)\1 corresponde a "11" ou "22", mas não a "12".
+(?i)                        Usado para tornar a correspondência insensível a maiúsculas e minúsculas. Por exemplo, (?i)abc corresponde a "abc", "AbC", "ABC" e assim por diante.
+(?s)                        Usado para tornar o ponto (.) correspondente a qualquer caractere, incluindo quebras de linha. Por padrão, o ponto corresponde a qualquer caractere, exceto quebras de linha.
+(?m)                        Usado para tornar ^ e $ correspondentes ao início e final de cada linha, em vez de corresponder apenas ao início e final da string inteira.
+(?x)                        Usado para permitir que a expressão regular inclua espaços em branco e comentários.
+(?imx:subexpressão)         Cria um grupo de subexpressão com as opções i, m e x ativadas. Por exemplo, (?i:abc) corresponde a "ABC", "Abc", "aBc" ou "abC".
+\cX                         Corresponde a um controle de caractere. Por exemplo, \cM corresponde a um caractere de retorno de carro.
+\q                          Cita o próximo caractere literalmente. Por exemplo, . corresponde a um ponto literal e \ corresponde a uma barra invertida literal.
+\number                     Usado para corresponder a um grupo de captura específico. Por exemplo, (\d{3})-\1 corresponde a "123-123".
+\named                      Nomeia um grupo de captura. Por exemplo, (?<nome>abc) captura "abc" e nomeia o grupo como "nome".
+(?:p)                       Corresponde a zero ou uma ocorrência de "p". Por exemplo, a(?:b)?c corresponde a "ac" ou "abc".
+(?#texto)                   Comentário. O texto é ignorado durante a correspondência. Por exemplo, a(?#isto é um comentário)bc corresponde a "abc".
+(?imx-imx:subexpressão)     Cria um grupo de subexpressão com opções ativadas e desativadas. Por exemplo, (?i-m:abc) corresponde a "abc", mas não a "ABC".
+(?=p)                       Corresponde a uma expressão que é seguida por "p" sem incluir "p" na correspondência. Por exemplo, a(?=b) corresponde a "a" somente se for seguido por "b".
+(?!p)                       Corresponde a uma expressão que NÃO é seguida por "p" sem incluir "p" na correspondência. Por exemplo, a(?!b) corresponde a "a" somente se não for seguido por "b".
+(?<=p)                      Corresponde a uma expressão que precede "p" sem incluir "p" na correspondência. Por exemplo, (?<=a)b corresponde a "b" somente se for precedido por "a".
+(?<!p)                      Corresponde a uma expressão que NÃO precede "p" sem incluir "p" na correspondência. Por exemplo, (?<!a)b corresponde a "b" somente se não for precedido por "a".
+
+⁡
+
+
+⁡⁢⁢⁢​‌‌‍EXEMPLOS ​⁡
+
+Esses metacaracteres podem ser combinados com outros para formar expressões regulares mais complexas e úteis. 
+Alguns exemplos de expressões regulares em JavaScript que usam esses metacaracteres são:
+
+⁡⁢⁢⁢[a-z]+	                                                    Corresponde a uma ou mais letras minúsculas de a a z.
+\d{3}-\d{2}-\d{4}	                                        Corresponde a um número de segurança social com formato xxx-xx-xxxx.
+\b[A-Z]\w+\b	                                            Corresponde a uma palavra que começa com uma letra maiúscula.
+(http|https)://\S+	                                        Corresponde a um URL que começa com http ou https.
+\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}	                            Corresponde a um endereço IP com formato xxx.xxx.xxx.xxx.
+^[a-zA-Z0-9_]$                                              Somente letras, números e sublinhados
+^[A-Z][a-zA-Z0-9_]$                                         Letra maiúscula seguida de letras, números e sublinhados
+^[a-z0-9]+@[a-z0-9]+.[a-z]{2,}$                             Endereço de e-mail válido
+^[0-9]{5}(?:-[0-9]{4})?$                                    CEP válido (formato americano)
+[0-9?][0-9?][0-9?][0-9?][0-9?]-[0-9?][0-9?][0-9?]           CEP válido (formato Brasileio)
+^?([0−9]3)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$                Número de telefone válido (formato americano)
+^[0-9]$                                                     Somente números
+^[a-zA-Z]$                                                  Somente letras
+^[-+]?\d+(.\d+)?$                                           Número decimal válido
+^[0-9]{1,3}(,[0-9]{3})(.[0-9]{2})?$                         Número decimal válido com separador de milhares (formato americano)
+^[a-zA-Z]+\s?[a-zA-Z]+$                                     Nome completo com espaço opcional
+^(?=.\d)(?=.[a-z])(?=.[A-Z])[0-9a-zA-Z]{8,}$                Senha forte com pelo menos uma letra maiúscula, uma minúscula e um número (mínimo de 8 caracteres)
+^[a-z0-9_-]{3,16}$                                          Nome de usuário válido (3-16 caracteres, letras minúsculas, números, sublinhados e traços)
+^[A-Z]{3}[0-9]{2}[0-9]{2}$/;                                Placa de carro válida (formato brasileiro)
+^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[^\w\d\s:])([^\s]){8,}$     Senha muito forte com pelo menos uma letra maiúscula, uma minúscula, um número e um caractere especial (mínimo de 8 caracteres)
+^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$                       CPF válido (formato brasileiro)
+^[0-9]{1,3}(.[0-9]{3})$                                     Número decimal válido com separador de milhares (formato brasileiro)
+^[0-9]{2}/[0-9]{2}/[0-9]{4}$                                Data válida no formato dd/mm/yyyy
+^[0-9]{4}-[0-9]{2}-[0-9]{2}$                                Data válida no formato yyyy-mm-dd
+^((http|https)://)?([\w]+.)+[\w]{2,63}([\w/?=])?            URL válida
+^[0-9]{1,2}$                                                Número de 1 ou 2 dígitos
+^0[0-9]{2,3}/[0-9]{4}-[0-9]{2}$                             Número de CNPJ válido (formato brasileiro)
+^[a-zA-Z\s]*$                                               Somente letras e espaços
+^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$             Endereço de e-mail válido
+BR[0-9?][0-9?][0-9?][0-9?]                                  Validar código qque tenha as duas primeiras letras BR
+cert*                                                       Encontrar o radical - no caso paalavras qque comecem com "cert"
+c[aeiou]+                                                   Encontrar caracter "c" seguido de uma ou mais vogais minusculas
+[aeiouAEIOUÀ-ú]{2,3}                                        Encontra ditongos e tritongos,⁡
+⁡
+
+
+⁡⁣⁢⁢​‌‌‍USO DAS CHAVES
+
+​{1,3}   De 1 a 3
+
+{3}      Pelo menos 3 (3 ou mais)
+
+{0,3}   Até 3
+
+{3}     Exatamente 3
+
+{1}     Exatamente 1
+
+{0,1}   Zero ou 1 (igual ao opcional)
+
+{0,}    Zero ou mais (igual  ao asterisco)
+
+{1,}    Um ou mais (igual ao mais)⁡
+
+
+
+
+⁡⁢⁢⁣​‌‌‍‍Âncora⁡​
+Os metacaracteres do grupo âncora estabelecem posições de referência para o casamento do restante da regex. 
+Eles não casam com caracteres específicos no texto ou definem quantidades, mas, sim, com posições antes, 
+depois ou entre os caracteres. Marcam uma posição específica na linha. 
+
+⁡⁢⁢⁣OLHAR PARA TRÁS ⁡: (?<=Y)X   , SENDO SOMENTE SE X ANTCEDER Y 
+⁡⁢⁢⁣OLHAR PARA FRENTE⁡ : X(?=Y)   , SENDO SOMENTE SE X SEGUIDO Y 
+
+EXEMPLO: ENCONTRAR TAG P EM UM HTML
+(?<=<p>)(.*)(?=</p>)
+
+
+⁡⁢⁢⁣^       Circunflexo         Início da linha                         ^[A]    ^(BR)
+
+$       Cifrão              Fim da linha                            [0-9][0-9][0-9]$ 
+
+\b      Borda               Início ou fim de palavra                [aeiouAEIOU][rR]\b
+
+\n     ⁡⁢⁢⁣Quebra de Linha      Para retornar uma nova linha            "Hello \n world" - retorna "Hello" em uma linha e "world" em outra   
+    
+\r      Para retornar uma linha                                     "Hello \r world" - retorna "world" sobrepondo "Hello"
+
+⁡⁢⁢⁣\s     para retornar espaço em branco                               "Hello \s world" - retorna "Hello" seguido de um espaço e "world"
+
+\d     para localizar números                                       "abc123xyz" - usando \d retorna "123"
+
+\A     para marcar o início do texto                                "\AHello" - retorna "Hello" somente se for encontrado no início da string
+
+\Z     para marcar o fim do texto                                   "world\Z" - retorna "world" somente se for encontrado no final da string
+
+\B     para retornar as posições de não borda                       "\Bfoo\B" - retorna "foo" somente se não estiver no início ou no final da palavra, por exemplo, em "barfoot" ou "footman" mas não em "football"⁡
+
+⁡⁢⁢⁣\           Escape                                                       Torna os metacaracteres em texto quando os antecede.
+
+\|          Ou                                                           Ou um outro.
+
+( )         Grupo                                                        Delimita um grupo.
+
+\1...\9     Retrovisor                                                   Textos casados nos grupos 1...9.⁡
+
+
+
+⁡⁣⁢⁣​‌‌‍‍Existem outros metacaracteres com funções específicas e não relacionadas entre si ​⁡
+
+⁡⁣⁢⁣
+⁡⁣⁢⁣|:                              Usado para especificar alternativas. Por exemplo, "cat|dog" corresponde a "cat" ou "dog".
+():                             Usado para criar grupos de captura, que podem ser usados posteriormente para manipular o resultado da correspondência. Por exemplo, "(foo)+" corresponde a uma ou mais ocorrências da sequência "foo".
+\1, \2, \3, etc.:               Usado para fazer referência a grupos de captura anteriores. Por exemplo, "(foo)bar\1" corresponde a "foobarfoo".
+?, +?, ??:                      Usados para especificar quantificadores de correspondência preguiçosa. Por exemplo, "a.?b" corresponde a qualquer sequência de caracteres que começa com "a" e termina com "b", mas faz a correspondência com o menor número possível de caracteres no meio.
+(?i), (?s), (?m), etc.:         Usados para especificar opções de correspondência. Por exemplo, "(?i)foo" corresponde a "foo", "Foo", "fOo", etc., sem distinguir entre letras maiúsculas e minúsculas.
+(?<=), (?<!), (?=), (?!), etc.: Usados para especificar afirmações de lookaround, que permitem que você faça correspondência com base na presença ou ausência de outros padrões ao redor do padrão atual. Por exemplo, "(?<=foo)bar" corresponde a "bar" apenas se for precedido pela sequência "foo".
+(?P<name>), (?P=name):          Usados para criar grupos de captura nomeados e fazer referência a eles posteriormente. Por exemplo, "(?P<foo>bar) (?P=foo)" corresponde a "bar bar".
+
+
+Regex: (a|e|i)ndo
+String de teste: caminhando, conversando, sofrendo, sorrindo
+Resultado: caminhando, conversando, sofrendo, sorrindo.
+
+Regex: \d
+String de teste: O número 3 é menor do 5, porém maior que 2.
+Resultado: O número 3 é menor do 5, porém maior que 2.
+
+Regex: (s)\1|(r)\2
+String de teste: O frango assa lentamente enquanto o carro chega.
+Resultado: O frango assa lentamente enquanto o carro chega.
+
+Regex: (([sS]u|[hH]i)per)?[mM]ercado
+String de teste: O sonho do mercado é virar Supermercado e depois hipermercado.
+Resultado: O sonho do mercado é virar Supermercado e depois hipermercado.
+
+(su|hi)permercado – nessa expressão, já retornaria o supermercado e o hipermercado, porém o mercado ficaria de fora. Por esse motivo, vamos melhorar o regex.
+
+((su|hi)per)?mercado – retirando o trecho “per” e deixando o trecho “mercado” como opcional, conseguimos abranger as três palavras. Vamos, agora, ajustar para localizar as palavras que começam com minúsculas e minúsculas.
+
+(([sS]u|[hH]i)per)?[mM]ercado – agora conseguimos atender a todos os critérios!⁡
+
+
+
+
+⁡⁣⁣⁢​‌‌‍RETROVISOR​⁡
+
+Os retrovisores “\” são muito úteis nos grupos. Como o nome diz, servem para “olhar para trás” e buscar um trecho que case 
+com o regex. Retrovisores são úteis em trechos repetidos em uma mesma linha.
+
+⁡⁣⁣⁢Regex: (quero)-\1
+Descrição: Encontra duas palavras “quero” com um “-” entre elas.
+String de teste: Hoje levei um susto de um quero-quero.
+Resultado: Hoje levei um susto de um quero-quero.
+
+Regex: ([A-Za-z]+)-?\1
+Descrição: Qualquer palavra repetida com um “-” entre elas.
+String de teste: Qualquer palavra repetida: quero-quero, bora-bora, vira-vira, Zé le-le.
+Resultado: Qualquer palavra repetida: quero-quero, bora-bora, vira-via, Zé le-le.
+
+Regex: ([A-Za-z]+) \1
+Descrição: Encontra letras repetidas com um espaço entre elas.
+String de teste: No dia a dia, estamos consultando a documentação ou saída de comando.
+Resultado: No dia a dia, estamos consultando a documentação ou saída de comando.
+
+Regex: \b([A-Za-z]+) \1\b
+Descrição: Encontra palavras repetidas com um espaço entre elas.
+String de teste: Qualquer palavra palavra repetida deve deve ser encontrada.
+Resultado: Qualquer palavra palavra repetida deve deve ser encontrada.⁡
+
+
+⁡⁢⁣⁢O regex somente pode ter, no máximo, nove retrovisores, então \10 será o retrovisor 1 seguido de um zero. 
+Vamos ver alguns exemplos que utilizam mais de uma possibilidade de retrovisor.⁡
+
+Regex: (lenta)(mente)
+Descrição: Encontra “lenta” ou “mente” em toda a string seguidos. Caso com \2 \1
+String de teste: lentamente é mente lenta.
+Resultado: lentamente é mente lenta.
+
+Regex: ((band)eira)nte
+Descrição: Encontra os dois grupos destacados mais um sufixo. \1 \2a
+String de teste: bandeirante bandeira banda.
+Resultado: bandeirante bandeira banda
+
+Regex: in(d)ol(or)
+Descrição: Encontra os dois grupos mas com um radical. Sem \1\2
+String de teste: indolor é sem dor.
+Resultado: indolor é sem dor.
+
+Regex: ((((a)b)c)d)-1 =
+Descrição: Aqui temos 4 grupos que aparecem em sequência. \1,\2,\3,\4
+String de teste: abcd-1 = abcd,abc,ab,a
+Resultado: abcd-1 = abcd,abc,ab,a
+
+⁡⁣⁢⁢​‌‌‍‍Quantificadores​⁡
+
+Como já sabemos, os quantificadores i͟n͟d͟i͟c͟a͟m ͟o n͟ú͟m͟e͟r͟o d͟e r͟e͟p͟e͟t͟i͟ç͟õ͟e͟s p͟e͟r͟m͟i͟t͟i͟d͟a͟s para entidade imediatamente anterior.
+EXITEM 2 TIPOS:
+
+⁡⁣⁢⁢Gulosos⁡   = Eles não são quantificáveis, logo n͟ã͟o ͟é p͟o͟s͟s͟í͟v͟e͟l u͟t͟i͟l͟i͟z͟a͟r d͟o͟i͟s d͟e͟l͟e͟s s͟e͟g͟u͟i͟d͟a͟m͟e͟n͟t͟e na regex.
+
+
+⁡⁣⁢⁢Não Gulosos⁡ = Eles são quantificáveis e buscam c͟a͟p͟t͟u͟r͟a͟r ͟o m͟á͟x͟i͟m͟o p͟o͟s͟s͟í͟v͟e͟l d͟e i͟n͟s͟t͟â͟n͟c͟i͟a͟s.
+
+
+
+⁡⁣⁢⁢G͟u͟l͟o͟s͟o͟s
+
+?       Opcional        Zero ou um
+
+*       Asterisco       Zero, um ou mais
+
++       Mais            Um ou mais
+
+{n,m}   Chaves          De n até m⁡
+
+
+
+⁡⁣⁢⁢N͟ã͟o G͟u͟l͟o͟s͟o͟s⁡
+
+Em alguns casos, a gulodice pode não atender ao que se espera. Por vezes, precisamos de um menor casamento possível. Dependendo da linguagem, 
+essa opção pode variar na sua definição, mas, b͟a͟s͟i͟c͟a͟m͟e͟n͟t͟e, b͟a͟s͟t͟a a͟c͟r͟e͟s͟c͟e͟n͟t͟a͟r u͟m͟a i͟n͟t͟e͟r͟r͟o͟g͟a͟ç͟ã͟o l͟o͟g͟o a͟p͟ó͟s o͟s q͟u͟a͟n͟t͟i͟f͟i͟c͟a͟d͟o͟r͟e͟s n͟o͟r͟m͟a͟i͟s, 
+conforme apresentado na tabela a seguir:
+
+⁡⁣⁢⁢??       Opcional não guloso        
+
+*?       Asterisco não guloso       
+
++?       Mais não guloso            
+
+{n,m}?   Chaves não guloso   ⁡       
+
+
+⁡⁣⁢⁢C͟O͟M͟P͟A͟R͟A͟Ç͟Ã͟O E͟N͟T͟R͟E G͟U͟L͟O͟S͟O ͟E N͟Ã͟O G͟U͟L͟O͟S͟O
+⁡
+Gulosos     Resultado     Não gulosos     Resultado
+ab*        ⁡⁣⁢⁢ abbbb ⁡        ab*?              ⁡⁣⁢⁢a⁡bbbb
+ab+         ⁡⁣⁢⁢abbbb⁡         ab+?              ⁡⁣⁢⁢ab⁡bbb
+ab?         ⁡⁣⁢⁢ab⁡bbb         ab??              ⁡⁣⁢⁢a⁡bbbb
+ab{1,3}     ⁡⁣⁢⁢abbb⁡b         ab{1,3}?          ⁡⁣⁢⁢ab⁡bbb
+
