@@ -1,0 +1,48 @@
+
+
+
+.icone{
+    background-color:blue;
+    top: 0%;
+    position: absolute;
+    border: 1px solid red;
+    width: 15%;
+    height: 15%;    
+    
+}
+.barraSuperior{
+    background-color: blueviolet;
+    position: absolute;  
+    left: 10%;
+    position: fixed;
+     
+    border: 1px solid red;
+    top:0%;
+    width: 90%;
+    height: 15%;
+}
+
+.barraLateral{
+    background-color:chartreuse;    
+    position: absolute  ;
+    top: 15%;
+    
+    border: 1px solid red;
+    width: 9.37%;
+    height: 85%;
+}
+
+.centro{
+    background-color:maroon;
+    position: absolute;  
+    left: 10%;
+    top:  15%;
+     
+    border: 1px solid red;
+   
+    width: 90%;
+    height: 85%;
+   
+      
+    
+}

@@ -1,0 +1,128 @@
+<!--A partir da HTML5, quando a HTML deixou de ser baseada na SGML, a declaração do Doctype foi simplificada, 
+como visto a seguir:
+<!DOCTYPE html>
+Comparando as declarações do Doctype entre a HTML5 e a HTML4, notamos algumas diferenças.
+A principal é que a HTML5, ao contrário das versões anteriores, não se baseia na SGML e, portanto, 
+não requer referência a um DTD-->
+<!DOCTYPE html>
+
+<!--TAG HTML-->
+<!--A tag inicial, após a declaração do Doctype, é a <html>. Tal elemento é a raiz do documento. Logo, 
+e lembrando que o código HTML é composto por uma estrutura hierárquica de tags, podemos dizer que a <html> 
+é a raiz da árvore do documento. Outra característica importante é que uma tag deve ser aberta e fechada.
+A declaração <html> é a abertura, e o seu fechamento se dá com a declaração </html>. Com isso, observando a imagem anterior, 
+é possível perceber que as demais tags estão contidas dentro da tag raiz, <html>.-->
+<html lang="en">
+<!--Antecipando um conteúdo que será visto mais adiante, cabe destacar outro elemento importante referente à tag raiz: 
+o atributo lang. Este, propositalmente, não foi inserido na Figura Estrutura básica de uma página Web, uma vez que ainda 
+não tratamos dos conceitos de atributo. Por ora, cabe dizer que este atributo global (por ser declarado na tag raiz) 
+deve ser utilizado para definir o idioma da página – podendo também ser aplicado a outras tags, definindo o idioma delas. 
+Alguns exemplos de sua declaração:
+<html lang=”en-US” >
+<html lang=”en-GB” >
+<html lang=”pt” >-->
+    +
+<!--==================================================================================================================================-->    
+
+<!--TAG HAED  - CABEÇA DO DOCUMENTO-->
+<!--A tag <head> é chamada de cabeçalho do documento. Fazendo analogia ao corpo humano, devemos vê-la como a cabeça, 
+uma vez que contém as tags que serão usadas para manter todo o documento funcionando e em ordem.
+Na tabela a seguir visualizamos as tags que fazem parte do cabeçalho:-->
+
+<!--
+
+<title> 
+É o título do documento, sendo visualizada na barra de título do navegador.
+
+<meta>
+Engloba uma série de informações – comumente chamadas de metainformações – como a descrição da página, palavras-chave etc.
+
+<script>
+É responsável pela inclusão e/ou definição de scripts relacionados ao documento.
+
+<link>
+É responsável pela inclusão de folhas de estilo (externas) relacionadas ao documento. Também possibilita a inclusão de favicons 
+(pequenos ícones que aparecem na barra de endereços do navegador).
+
+<style>
+Assim como a anterior, é responsável pelo vínculo de folhas de estilo ao documento − quando elas são declaradas diretamente no documento.-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TÍTULO DA PÁGINA</title>
+</head>
+
+
+<!--CORPO DO DUCUMENTO-->
+<!--Logo abaixo do cabeçalho deve ser inserida a tag <body>. Esta é responsável pela estruturação do documento, sobretudo de seu conteúdo 
+e também apresentação – embora seja fortemente recomendado que a apresentação do documento, como será visto no módulo específico, 
+seja feita por meio de folhas de estilo (CSS).
+Quando navegamos em um website, todo o conteúdo que vemos – os textos, imagens e demais elementos – está contido na tag <body>.-->
+<body>
+    <h1>CORPO DA PAGINA</h1>
+
+    <h3>!DOCTYPE html</h3>    
+        <P>A partir da HTML5, quando a HTML deixou de ser baseada na SGML, a declaração do Doctype foi simplificada, 
+            como visto a seguir:
+            <!DOCTYPE html>
+            Comparando as declarações do Doctype entre a HTML5 e a HTML4, notamos algumas diferenças.
+            A principal é que a HTML5, ao contrário das versões anteriores, não se baseia na SGML e, portanto, 
+            não requer referência a um DTD
+        </P>
+
+    <h3>TAG HTML</h3>
+        <P>A tag inicial, após a declaração do Doctype, é a <html>. Tal elemento é a raiz do documento. Logo, 
+            e lembrando que o código HTML é composto por uma estrutura hierárquica de tags, podemos dizer que a <html> 
+            é a raiz da árvore do documento. Outra característica importante é que uma tag deve ser aberta e fechada.
+            A declaração <html> é a abertura, e o seu fechamento se dá com a declaração </html>. Com isso, observando a imagem anterior, 
+            é possível perceber que as demais tags estão contidas dentro da tag raiz, <html> 
+
+        </P>
+    
+    <h3>TAG LANG</h3>
+        <P>Antecipando um conteúdo que será visto mais adiante, cabe destacar outro elemento importante referente à tag raiz: 
+            o atributo lang. Este, propositalmente, não foi inserido na Figura Estrutura básica de uma página Web, uma vez que ainda 
+            não tratamos dos conceitos de atributo. Por ora, cabe dizer que este atributo global (por ser declarado na tag raiz) 
+            deve ser utilizado para definir o idioma da página – podendo também ser aplicado a outras tags, definindo o idioma delas. 
+            Alguns exemplos de sua declaração:
+            <html lang=”en-US” >
+            <html lang=”en-GB” >
+            <html lang=”pt” >
+
+        </P>
+    
+    <h3>TAG HEAD</h3>
+        <P>-A tag <head> é chamada de cabeçalho do documento. Fazendo analogia ao corpo humano, devemos vê-la como a cabeça, 
+            uma vez que contém as tags que serão usadas para manter todo o documento funcionando e em ordem.
+            Na tabela a seguir visualizamos as tags que fazema parte do cabeçlho
+            <P>
+                    <H4>TÍTLE</H4> 
+                    É o título do documento, sendo visualizada na barra de título do navegador.
+            </P>
+            <P>
+                    
+                <H4>META</H4> 
+                    Engloba uma série de informações – comumente chamadas de metainformações – como a descrição da página, palavras-chave etc.
+            </P>
+            <P>
+                <H4>SCRIPT</H4> 
+                    É responsável pela inclusão e/ou definição de scripts relacionados ao documento.
+            </P>
+            <P>
+                <H4>LINK</H4> 
+                    É responsável pela inclusão de folhas de estilo (externas) relacionadas ao documento. Também possibilita a inclusão de favicons 
+                    (pequenos ícones que aparecem na barra de endereços do navegador).
+            </P> 
+            <P>  
+                <H4>STYLE</H4> 
+                    Assim como a anterior, é responsável pelo vínculo de folhas de estilo ao documento − quando elas são declaradas diretamente no documento.
+            </P>
+
+        </P>
+    
+
+    
+</body>
+</html>

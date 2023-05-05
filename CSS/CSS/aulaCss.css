@@ -1,0 +1,206 @@
+/* CSS - CASCADING STYLE SHEETS */
+/* FOLHA DE ESTILOS EM CASCATA */
+
+/* SINTAX BÁSICA DO CSS */
+
+/* SELETORES*/
+/* SELETORES -  UNIVERSAL usa-se o "*"   */
+/* TODO: Todos os elementos iram receber as informações passada */
+*{
+   background-color: aqua; 
+}
+/* 
+>>> COMENTÁRIO <<<<
+
+* COLOCANDO UM ASTERISTICO
+! COLOCANDO UMA ESCLAMAÇÃAO
+TODO: COLOCANDO TODO:
+
+>> IMPORTANTE <<
+EXTENSÃO BETTE COMMENTS
+*/
+
+/* SELETORES -  TIPO  */
+/* usado para informar o nome da tag */
+/* nessa caso a tag = body */
+/* 
+height -  ALTURA
+width -  largura
+
+*/
+/*todo: colocando uma imagem no fundo do body*/
+body{
+    background-image: url("../hack.jpg");
+    height:200vh;
+   
+    font-family: sans-serif;
+    margin: 0;
+}
+
+/* SELETORES -  CLASS  */
+/* usado para informar o nome da class usando um ponto no inicio */
+/* nessa caso a CLASS = classe1 */
+.classe1{
+    position: relative;
+    background-color: green;
+    height: 3%;
+    width:80%;
+}
+
+.id4{
+    background-color: rgb(116, 23, 100);
+    height: 3%;
+    width:80%;
+}
+
+body h5{
+    position: relative;
+    background-color:darkred;
+    height: 3%;
+    width:80%;
+}
+
+/* SELETORES -  ID  */
+/* usado para informar o ID da tag com o # na frente do nome da id */
+/* nessa caso a ID = body */
+#valorUsuario{
+    position: relative;
+    background-color:black;
+    height: 3%;
+    width:80%;
+    color: wheat;
+}
+#cabecalho{
+    position: relative;
+    margin: 0;
+    height: 3%;
+    width:80%;
+    color: white;
+}
+
+/* SELETORES -  ATRIBUTO  */
+
+/* usado para informar o TIPO = " NOME"  E TEM QUE SER DENTRO DE COUCHETES*/
+/* nesse caso o tipo é nome, e o valor é joão tavares igual la no HTML */
+[class = "id2"]{
+    position: relative;
+    background-color:darkorange;
+    height: 3%;
+    width:80%;
+}
+
+/* pode usar o $= para identificar qual elemento termina com ? */
+[class $= "3"]{
+    position: relative;
+    background-color:greenyellow;
+    height: 3%;
+    width:80%;
+}
+
+
+
+/* SELETORES -  PSEUDOS SELETORES  */
+/* 
+esses pseudos seletores eles ja possuem um padrão, servem para dar um dinamismo nos elementos 
+como passar o mouse encima do elemento ele troca de cor etc.., dentre outros
+
+PRECISA INFORMAR O ELEMENTO : E O PSEUDO SELETOR QUE DESEJA
+*/
+.classe1:hover{
+    background-color:chartreuse;
+}
+#valorUsuario:hover{
+    background-color:chartreuse;
+}
+.class5:hover{
+    background-color:chartreuse;
+   
+}
+
+
+/* >> CRIAÇÃO DE UM BOTÃO<<*/
+/*  
+>>>>> BORDAS <<<<<< 
+RIGTH: Direita
+BOTTOM: Fundo
+LEFT: Esquerda
+
+BORDER: TOP, RIGHT, BOTTOM , LEFT
+
+BORDER: 0 ; QUANDO INFORMADO UM VALOR SIGNIFICA QUE TODOS OS LADOS VÃO RECEBER O MESMO VALOR PARA TODOS ;
+
+BORDER: 0 0 ; QUANDO INFORMADO DOIS VALORES, SIGNIFICA QUE ESTAMOS INFORMANDO NO PRIMEIRO (TOP E BOTTOM) VÃO RECEBER O MESMO VALOR
+E NO SEGUNDO (LEFT E RIGTH);
+
+BORDER: 0 0 0 0 ;  QUANDDO USADO OS 4 ELEMENTOS CADA ELEMENTO RECEBERÁ O SEU VALOR EXPECÍFICO, SEGUNDO A SEQUENCIA ( TOP, RIGTH, BOTTOM, LEEFT )
+
+>>>>>> PADDING <<<<
+< PEENCHIMENTO - INTERNO >
+
+SEGUE A MESMA REGRA DO BORDER
+
+*/
+
+.botao{
+    background-color: azure;
+    color: black;
+    border: 4px solid;
+    margin: 50px;    
+    padding: 15px 40px ;
+    transition: 0.25s;
+    
+}
+
+.botao:hover, .botao:focus{
+    color:antiquewhite;
+    border-color: yellowgreen;
+    box-shadow: 0 0 0 15px rgba(255,255,255,0);
+    animation: pulsar 1s;
+}
+
+@keyframes pulsar{
+    0%{
+        box-shadow: 0 0 0 0 yellowgreen;
+    }
+    
+    
+}
+
+/*<><><>><><><><><><>><><><><><><><><><><><*/
+
+/*
+>>>> POSITION <<<<
+TODO: OS ELENTOS AO SEREM CRIADOS TODOS RECEBEM O POSITION " STATIC", OU SEJA PARADO, SE TIVER OUTRO ELEMNTO ESTÁTICO O MESMO FICARÁ EM BAIXO OU NA LATERAL
+>> COM O ATRUBUTO STATIC OS COMENTOS ( TOP, RIGTH, BOTTOM, LEFT) NÃO FUNCIONAM
+
+* O POSITION POSSUI OS SEGUINTES ATRIBUTOS
+
+> STATIC
+> FIXED - CONGELAR NA TELA
+> ABSOLUTE - POSSUI REGRAS PARA POSICIONAR EM QUALQUER  LUGAR NA TELA OU EM QUALQUER LUGAR DENTRO DE UM RELATIVE
+> RELATIVE - SEU DESLOCAMENTO E RELATIVO A ELE MESMO , OU SEJA ONDE ELE APARCECER DA LI ELE PODE SER POSICIONADO
+> STICKY - QUAANDO RODO A BARRA DE ROLAGEM ELE FICA CONGELAADO NA PARTE DE CIMA
+*/
+
+
+/*
+! USANDO O POSITION RELATIVE
+PRIMEIRAMENTE IREMOS ZERAR A MARGEM QUE COLOCAMOS NO EXEMPLO ANTERIOR
+POSICIONANDO PARA A DIREITA JA QUE O BOTÃO FOI CRIADO JUNTO A MARGEM ESQUERDA
+ENTÃO SERÁ POSICIONADO PARA A DIREITA , SENDO QUE 0 E O INICIO DA ESQUERDA PARA A DIREITA
+PODE TAMBEM SER USADO O O TOP E BOTTOM PARA MOVIMENTAR PARA CIMA OU PARA BAIXO
+*/
+.botao{
+    margin: 0;
+    position: relative;
+    left: 10%;
+}
+
+/*
+! USANDO O POSITION ABSOLUTE
+
+*/
+
+
+
+

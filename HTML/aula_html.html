@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="aula java escrip , html e css">
+    <meta name="keywords" content="aula, javascrip, css, aprender">
+    <title>Aula Javascript</title>
+   
+    <h1 id="cabecalho"><span id="textCabecalho"></span></h1>
+
+    <!--        
+        FORMAS DE USAR O CSS
+        É importante resaltar a ierarquia quando se usa o css
+        1-PRIORITÁRIA(Dentro da Tag)
+        2-SECUNDÁRIA(USANDO A TAG STAYLER)
+        3-TERCEÁRIA (USANDO O CSS)
+
+        A PRECEDENCIA É IMPORTANTE
+    
+    -->
+
+    <!-- 1- DENTRO DE UMA TAG-->
+    <h1 style="background-color: blueviolet; height: 3%; width:80%;"
+    >USANDO O CSS DENTRO DA TG</h1>
+
+    <!-- 2 USANDO A TAG STAYLE-->
+    <style>
+        .class5{
+            background-color: green;
+            height: 3%; 
+            width:80%;"
+        }
+    </style>
+
+    <!-- 2 USANDO UM ARQUIVO EXTERNO
+    
+    É IMPORTANTE RESALTAR QUE ESSA PRÁTICA É A MAIS RECOMENDADA
+    SEMPRE DEVE SER FEITO DESSA FORMA, SÓ RARISSIMAS ECESSÕES SE USA AS OUTRAS FORMAS.
+    
+    OBS: SE AS OUTAS FORMAS FOREM USADAS ELES TERÃO PRECEDENCIA SOBRE ESSA. PORTANTO USAR EM ULTIMO CASO
+    -->
+    <link rel="stylesheet" href="aulaCss.css">
+   
+
+</head>
+<body>
+    
+    <button type="button" class="botao">Entrar</button>
+
+    <h1 class="classe1">DESAFIO 2</h1>
+    <h2>O cliente ele:<span id="valorUsuario"></span></h2>
+    <h3 class="id2">SELETORES -  ATRIBUTO</h3>
+    <h4 class="id3">SELETORES -  ATRIBUTO USANDO $ PARA ESCOLHER COM O QUE TERMINA</h4>
+    <h4 class="id4">SELETORES -  PSEUDOS SELETORES </h4>
+    <h5>H5 SEM CLASSE</h5>
+    
+        
+    <div class="class5">
+    <h1>SENDO USADA COM CSS NA TAG STYLE </h1>
+    </div>
+    <script src="aulasJs.js"></script>
+</body>
+</html>

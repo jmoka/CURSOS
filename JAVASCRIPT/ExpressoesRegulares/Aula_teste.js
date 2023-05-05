@@ -5,7 +5,7 @@ expressão regular fornecida⁡.*/
 
 // ⁡⁢⁣⁣Verificar se uma string contém um nome  válido:⁡
 var texto = "Bacu Digital";
-var reg = /Bacu/;
+var reg = [B];
 let resposta = reg.test(texto); // true⁡
 console.log(resposta);
 
