@@ -1,2 +1,2 @@
 # Aulas
-Aulas feitas através de cirsos feitos na carreira!! Esse é o aprendizado absorvido até o momento!!!
+Aulas feitas através de cursos feitos na carreira!! Esse é o aprendizado absorvido até o momento!!!
