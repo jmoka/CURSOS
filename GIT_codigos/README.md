@@ -30,17 +30,25 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 
 ##### Setar email
 	git config --global user.email <email>
-	
-##### Setar editor
-	git config --global core.editor vim
-	
-##### Setar ferramenta de merge
-	git config --global merge.tool vimdiff
 
-##### Setar arquivos a serem ignorados
-	git config --global core.excludesfile ~/.gitignore
+##### Alterar o  valor 
+	Para alterar o valor já setadao tanto para name quanto para email é so incluir um outro valor usando o mesmo comando
+	git config --global user.name "<novo-nome-usuario>"
+	git config --global user.email <novo-valor>
+	
+##### Excluir
+	Para excluir a configuração global de e-mail ou name do Git, você pode usar o seguinte comando
+	git config --global --unset user.name
+	git config --global --unset user.email
+	
+#####	Pra verificar se foi excluido 
+	git config --global user.name
+	git config --global user.email
+	obs: Se não retornar nada é porque foi removido !!
+	obs: Pode ser verificado também na lista de configurações abaixo
 
 ##### Listar configurações
+	Lista todas as configurações ( importante )
 	git config --list
 
 ### Ignorar Arquivos
