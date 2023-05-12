@@ -55,6 +55,20 @@ As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado 
 		ssh-keygen -t ed25519 -C "your_email@example.com"
 	- Após executar o comando será solicitado qque informe uma senha e confirme , caso não queira é so aperter ENTER
 	
+### Copiar Chave
+	Get-Content $HOME\.ssh\id_ed25519.pub | Set-Clipboard
+	
+### SSH GITHUB
+	- Abra seu github
+	- Clique onde está sua foto -  canto superior direito
+	- Settings
+	- SSH ande GPG keys
+	- New SSH key
+	- De um nome em Title
+	- Cole a cheve em kay
+	
+	
+	
 ##### Alterar o  valor 
 	Para alterar o valor já setadao tanto para name quanto para email é so incluir um outro valor usando o mesmo comando
 	git config --global user.name "<novo-nome-usuario>"
