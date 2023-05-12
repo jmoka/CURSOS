@@ -21,19 +21,8 @@
 
 ### Geral
 
-As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado dentro do diretório do usuário do Sistema Operacional 
-
-As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
-
-##### Setar usuário
-	git config --global user.name "<nome-usuario>"
-
-##### Setar email
-	git config --global user.email <email>
+As configurações do GIT são armazenadas no arquivo **.gitconfig** localizado dentro do diretório do usuário do Sistema Operacional. As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
 	
-#### Verificar Chave Publica - SSH
-	cat ~/.ssh/id_rsa.pub
-
 # CHAVE PUBLICA
 ## Verificando se Existe
 	- Navegue até o diretório digitando no prompt
@@ -63,8 +52,9 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 	
 ### Gerar uma Chave Publica
 	- Isso irá gerar uma nova chave SSH RSA com o tamanho de bits 4096. Substitua "seu_email@example.com" pelo seu endereço de e-mail associado 		à sua conta.
+		ssh-keygen -t ed25519 -C "your_email@example.com"
+	- Após executar o comando será solicitado qque informe uma senha e confirme , caso não queira é so aperter ENTER
 	
-
 ##### Alterar o  valor 
 	Para alterar o valor já setadao tanto para name quanto para email é so incluir um outro valor usando o mesmo comando
 	git config --global user.name "<novo-nome-usuario>"
