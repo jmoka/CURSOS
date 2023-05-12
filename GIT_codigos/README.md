@@ -30,6 +30,13 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 
 ##### Setar email
 	git config --global user.email <email>
+	
+#### Verificar Chave Publica - SSH
+	cat ~/.ssh/id_rsa.pub
+	
+### Gerar uma Chave Publica
+	- Isso irá gerar uma nova chave SSH RSA com o tamanho de bits 4096. Substitua "seu_email@example.com" pelo seu endereço de e-mail associado 		à sua conta.
+	
 
 ##### Alterar o  valor 
 	Para alterar o valor já setadao tanto para name quanto para email é so incluir um outro valor usando o mesmo comando
