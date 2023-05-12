@@ -33,6 +33,33 @@ As configurações realizadas através dos comandos abaixo serão incluídas no 
 	
 #### Verificar Chave Publica - SSH
 	cat ~/.ssh/id_rsa.pub
+
+# CHAVE PUBLICA
+## Verificando se Existe
+	- Navegue até o diretório digitando no prompt
+		cd ~/.ssh
+		
+	- Não precisa está na Pasta
+		Get-ChildItem ~/.ssh
+	
+## Listar todas as chaves
+	- Navegue até o diretório digitando no prompt
+		ls *.pub
+		
+	- Não precisa está na Pasta
+		Get-ChildItem $HOME\.ssh
+
+## Exclui todas as Chaves
+	- Navegue até o diretório digitando no prompot
+		rm *.pub
+		
+	- Navegue até o diretório digitando no prompot
+		Remove-Item $HOME\.ssh\*.pub
+		
+## Exclui um Item 
+	- Primeiro liste os itens  veja o nome e exclua
+		Remove-Item $HOME\.ssh\nome-item
+
 	
 ### Gerar uma Chave Publica
 	- Isso irá gerar uma nova chave SSH RSA com o tamanho de bits 4096. Substitua "seu_email@example.com" pelo seu endereço de e-mail associado 		à sua conta.
