@@ -62,7 +62,7 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 	Valor passado para o componente filho
 
 
-# IMPORTANTE
+## IMPORTANTE
 
 	1 - Dados sempre de cima para baixo;
 	2 - Ações ou eventos no sentido de baixo para cima;
@@ -70,7 +70,11 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 	4 - O estado (state) mantém o estado interno de cada componente e pode ser alterado pelos filhos.
 
 # INSTALAÇÃO
-
+## INSTALAÇÃO RÁPIDA
+	Após a Clonar ou Quando Criar um novo Diretório
+		1- npm install -g create-react-app
+		2- yarn add expo
+		3- npm start 
 ### Node.js
 	https://nodejs.org/en/download
 	Instalar - LTS
@@ -88,37 +92,32 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 	Online:
 	https://vscode.dev/
 
-# PRIMEIRO APP
+# Prmeiro APP
 	Site: https://reactnative.dev/
 	Guia: https://reactnative.dev/docs/getting-started
 
 ## Execute o seguinte comando para criar um novo projeto React Native
-
-## INSTALNDDO O PACOTE ( create-react-app )
-	 para instalar comando de linha de comando (cmdlet) no seu ambiente ( Para ambiente que não suporta o comando diretamente.)
+## Instalando Pacote ( create-react-app )
+	Para instalar comando de linha de comando (cmdlet) no seu ambiente ( Para ambiente que não suporta o comando diretamente.)
 
 	npm install -g create-react-app
-
-
+##  Framework Expo
+	yarn add expo
 ## NPM
-
-	< Instalar >
+### Instalar 
 
 		npx create-react-app NOME-PROJETO
 					- Esse instalador é usado para criar um novo projeto React padrão
 
 		npx create-expo-app NOME-PROJETO
 					- Esse instalador é usado para criar um novo projeto Expo. O Expo é um framework que simplifica o desenvolvimento de aplicativos móveis com React Native. Com o Expo, você pode criar aplicativos para iOS e Android usando JavaScript e React Native, sem precisar lidar diretamente com a configuração nativa de cada plataforma
-
 		
 		RESUMO:
 			Em resumo, enquanto o create-react-app é usado para criar projetos React tradicionais com configuração mínima, o create-expo-app é voltado para criar projetos Expo que simplificam o desenvolvimento de aplicativos móveis usando React Native.
 
 ## COMANDOS
-
 ### Inicia o servidor de desenvolvimento
 	 npm start 
-
 ### Cria os arquivos estáticos otimizados para produção
 
 	 npm run build 
@@ -129,9 +128,10 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 
 ### Eject remove essa ferramenta e copia as dependências de compilação, arquivos de configuração e scripts para o diretório do aplicativo. Se você fizer isso, não poderá voltar atrás!
 
+< perigoso >
+
 	npm run 	
 	
-
 ## SUPORTE PARA WEB - DEPENDENCIAS
 
 	npx expo install react-native-web@~0.18.10 react-dom@18.2.0 @expo/webpack-config@^18.0.1
@@ -146,7 +146,7 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 	https://developer.android.com/studio
 
 
-## INICIALIZR
+## INICIALIZAR
 	< Navegue até a pasta do prrojeto >
 		cd NOME-PROJETO
 	
@@ -180,7 +180,7 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 			)
 		}
 
-### obs: dentro do componente so poderá haver uma tag, e todo o conteudo dentro dela
+### Obs: Dentro do componente so poderá haver uma tag, e todo o conteudo dentro dela
 			ex: 
 			<>
 				conteudo aqui dentro
@@ -258,19 +258,18 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 
 		import nome-qualquer from './componet/nome-arquivo';
 
-## Importação de dentro da pasta   src
+## Importação de dentro da pasta src
   
   		import nome-qualquer from './nome-arquivo';
 
 ## CRIAR UM COMPONET
-
-	Os componentes são criados dentro da pasta componentes dentro da pasta src
-	- servem para cir exatamente componentes do site como , header, seções, rodape, um  independente do outro
-	- usase a simtax basica 
+### Os componentes são criados dentro da pasta componentes dentro da pasta src
+#### - servem para cir exatamente componentes do site como , header, seções, rodape, um  independente do outro
+#### - usar a simtax basica 
 		
 		import React from "react"	
 	
-			export default function Header(){
+			export default function Qualquer-Nome(){
    
 					return (
 						<header>
@@ -279,29 +278,161 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 		    			</header>
 					)
 				}
+## - IMPORTAR UM COMPONENTE
+	Abra o arquivo App.js
+	import Qualquer-nome(convenção-nome-do-componante) from './components/nome-componente'
+	import Qualquer-nome(convenção-nome-do-componante) from './components/sub-pasta/nome-componente'
 
-## CSS NO COMPONENTE
-// criar antes de retune constantes com a formatação desejada do css e depois e so aplicar da tag desejada
-		import React from "react"	
+	Obs: A pasta COMPONENT esta dentro da pasta SRC
+
+
+## - ENVIAR DADOS DO COMPONENTE PAI PARA O COMPONENTE FILHO ( PROPS )
+	- Isso permite a criação de uma estrutura de componentes modular e reutilizável.
+#### Sintax componente FILHO:
+
+##### 1 Sintex Básica
+
+		import React from "react"
+
+			export default function nome_componente(){
+
+				<>
+				<p>Nome:</p>				// propriedade nome
+				<p>Sobrenome:</p>			// propriedade pai
+				</>
+
+			}	
+		
+##### 2 Sintex recebendo os Atributos do Pai
+
+			import React from "react"
+
+			export default function nome_componente(props){
+
+				<>
+				<p>Nome:{props.nome}</p>					// propriedade nome acessada do pai ( props.nome )
+				<p>Sobrenome:{props.sobrenome}</p>			// propriedade sonbrenome acessada do pai ( props.nome )
+				</>
+			}	
+#### Observações
+	OBS: O componente pai de todos é o APP.JS
+	OBS: O componente pai pode se qualquer um componente , mas para que seja rendesirazado no virtial-Dom
+		 prcisa com que esse componente pai seja importado em nosso APP.JS ou seja no componente pai de todos.
+	OBS: O componente pai importa os componentes filhos e o componente pai de todos importa os componentes pais
+ #### Sintax componente PAI:
+ 
+### Criar as Propriedades no Componente FILHO
+	- Os Atributos são criados no componente Pai e enviado para os Filhos que tiverem a propriedade PROPS
+
+
+		import React from "react"
+
+		import Componente-filho(convenção-nome-do-componante) from './components/nome-componente'
+
+			export default function app(){
+				return(
+
+					<>
+					// Declarar os componentes que serão renderizado no virtial-dom, lembando que estamos no componente pai de todos APP.ja
+
+
+						<Componente-filho(Nome declarado na Importação) 				
+
+							nome =""
+							sobrenome =""
+
+							// Obseve que o atributoos foram criados no componente filho
+							// Agora o componente filho ao usar props.  estará acessando os atributos que o pai está passando
+						/>
+
+					</>
+					
+
+				)
+
+			}
+
+		
+## CSS 
+	- O CSS pode ser implementada das tês formas, como no javaScript
+
+			1- Inline
+			2- Incorporado
+			3- Classes
+
+### Inline
+	- Dentro da própria tag chamamos o "style" com 2 chaves
+
+		<h1 style ={{}}>Jota Contabilidade</h1> // observe o uso das chaves
+
+			ex: 
+				<h1 style ={{clolor:"blue", border:"solid"}}>Jota Contabilidade</h1> // observe o uso das chaves
+	- Observação
+		- Dentros das chaves tem qur ser separado por virgula "," 
+		- As Palavas compostas deverão ser unida e a segunda palavra iniciar com letra maiuscula
+			ex: font-size     /   fonteSize
+			<h1 style ={{clolor:"blue", border:"solid", fonteSize:"5em"}}>Jota Contabilidade</h1>
+### Incorporado
+	- Dentro de export default criaremos um objeto literal contenddo todas as propriedades css daquele objeto
+	- Utilizamos Apenas uma chave para chamar o objeto
+		ex:
+
+		export default function (){
+
+				const Capa = {
+					clolor:"blue", 
+					border:"solid", 
+					fonteSize:"5em"
+					}
+				
+				return (
+
+					<h1 style= {Capa}></h1>	 // Apenas uma chave
+
+				)
+			}
+
+			
+### CSS DE CLASSE
+	- Criar um arquivo .css e nesse arquivo são declaradas as classe css
+	- Pode ser criada variso arquivos css, pode usar um unico isso vai de cada organiação
+
+#### Componente que recebe CSS
 	
-			export default function Header(){
+		export default function CSS (){
 
-				const css_header = {
-					 	backgroundColor: "blue",
-        				color: "white",
-        				padding: "10px",
+    		let css_incorporado = {
+        		color :"blue",
+        		background :"red",
+        		fontSize : "5mn"
+    		}
+    		return (
+        	<>
+            	<h1>APLICANDO O CSS INLINE</h1>
+            	<h1 style={{color:"blue", fontSize:"5mn"}}>CSS INLINE SENDO USADO</h1>
 
-				}
-   
-					return (
-						<header  style={css_header}>
-    						<h1 class="bg-primary"> CABEÇALHO</h1>          
-                
-		    			</header>
-					)
-				}
-  
+            	<h1>APLICANDO O CSS INCORPORADO</h1>
+            	<h1 style={css_incorporado}>CSS INCORPORADO SENDDO USADO</h1> 
 
+            	<h1>APLICANDO O CSS EM CLASSES</h1>
+            	<h1 className="classeCSS"> CSS EM CLASSES SENDO USADA</h1>
+
+        	</>    
+    )
+
+
+}
+
+#### Componente CSS
+	- Aplica as classe 
+
+			ex:
+			
+			.classeCSS{
+    			font-size: 5mm;
+    			color: beige;
+    			background: red;
+			}
 
 
 

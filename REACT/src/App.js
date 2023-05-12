@@ -16,6 +16,10 @@
 import logo from './logo.svg';
 import logo_J from './componet/imgs/logo_jota.jpg';
 import Header from './componet/header'
+import Botao from './componet/botoes/btn'
+import ComponentePai from './componet/Aula_Propriedades/ComponentePai'
+import Enviarfunc from './componet/Enviar_Funcoes/el_pai'
+import CSS from './componet/Aula_CSS/AulaCSS'
 import './App.css';
 const agil = '/agil.jpg';
 
@@ -37,34 +41,36 @@ const subtrair = ()=>{
   return num1 - nun
 }
 
-
-
   return (
     <div className="Ap">
 
+       <Botao/>
        <Header/>
+       <ComponentePai/> 
+       <Enviarfunc/> 
+       <CSS/>
       <header className="App-header">
-{/*       
+      
         <img src={logo} className="App-logo" alt="logo" /> 
         <img src={logo_J} className="App-logo" alt="logo" />
         <img src={agil} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload. <br/>
-          <br/> */}
-          {/* Declarando das Constantes e Variáveis usando Chaves {} */}
-          {/* {nome} {sobrenome} */}
-          {/* Declarando a string dentro da tag */}
-          {/* <p>João {sobrenome}</p> */}
-           {/* Declarando a string dentro das Chaves */}
-           {/* <p> {nome + "Tavares" }</p> */}
+          <br/> 
+          Declarando das Constantes e Variáveis usando Chaves {}
+          {nome} {sobrenome}
+          Declarando a string dentro da tag
+          <p>João {sobrenome}</p>
+           Declarando a string dentro das Chaves
+           <p> {nome + "Tavares" }</p>
 
-           {/* Retorno de uma Função Nomal */}
-           {/* <p>{soma()}</p> */}
+           Retorno de uma Função Nomal
+           <p>{soma()}</p>
 
-          {/* Retorno de uma Arrow Function */}
-           {/* <p>{subtrair()}</p> */}
+          Retorno de uma Arrow Function
+           <p>{subtrair()}</p>
 
-{/* 
+
         </p>
         <a
           className="App-link"
@@ -74,7 +80,7 @@ const subtrair = ()=>{
         >
           Meu primeiro App React
           
-        </a> */}
+        </a>
       </header>
     </div>
   );
