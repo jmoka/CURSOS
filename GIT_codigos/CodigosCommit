@@ -1,0 +1,44 @@
+# Abre o editor de texto padrão para adicionar uma mensagem de commit:
+git commit
+
+# Adiciona automaticamente todas as alterações conhecidas ao commit:
+git commit -a
+
+# Adiciona uma mensagem de commit diretamente no comando:
+git commit -m "Mensagem do commit"
+
+# Combina as opções -a e -m, adicionando todas as alterações e uma mensagem de commit diretamente no comando:
+git commit -am "Mensagem do commit"
+
+# Cria um commit vazio, sem alterações:
+git commit --allow-empty
+
+# Modifica o commit anterior, permitindo que você altere a mensagem do commit ou adicione novas alterações ao commit mais recente:
+git commit --amend
+
+# Realiza o commit sem executar os hooks de verificação configurados:
+git commit --no-verify
+
+# Adiciona uma assinatura ao commit, indicando o autor da alteração:
+git commit --signoff
+
+# Reseta o autor do commit para o padrão configurado no Git:
+git commit --reset-author
+
+# Define a data do commit para uma data específica:
+git commit --date="YYYY-MM-DD HH:MM:SS"
+
+# Realiza o commit com assinatura GPG, opcionalmente especificando a chave GPG a ser usada:
+git commit --gpg-sign[=<key-id>]
+
+# Desativa a reescrita automática de commits por hooks ou filtros:
+git commit --no-post-rewrite
+
+# Realiza o commit usando padrões de caminho especificados em um arquivo:
+git commit --pathspec-from-file=<file>
+
+# Suprime mensagens de saída durante o commit:
+git commit --quiet
+
+# Executa uma simulação do commit sem efetivamente criar o commit:
+git commit --dry-run
