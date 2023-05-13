@@ -17,9 +17,14 @@ import logo from './logo.svg';
 import logo_J from './componet/imgs/logo_jota.jpg';
 import Header from './componet/header'
 import Botao from './componet/botoes/btn'
-import ComponentePai from './componet/Aula_Propriedades/ComponentePai'
-import Enviarfunc from './componet/Enviar_Funcoes/el_pai'
-import CSS from './componet/Aula_CSS/AulaCSS'
+import ComponentePai from './componet/AulaPropriedades/ComponentePai'
+import AulaComponentesFuncionais from './componet/AulaComponentesFuncionais/ElPai'
+import CSS from './componet/AulaCSS/AulaCSS'
+import Relogio from './componet/AulaRenderizcao/Relogio'
+
+// import React, {useState} from "react";
+import States from './componet/AulaState/State'
+
 import './App.css';
 const agil = '/agil.jpg';
 
@@ -41,13 +46,15 @@ const subtrair = ()=>{
   return num1 - nun
 }
 
-  return (
+ return (
     <div className="Ap">
 
        <Botao/>
+       <Relogio/>
+       <States/>
        <Header/>
        <ComponentePai/> 
-       <Enviarfunc/> 
+       <AulaComponentesFuncionais/> 
        <CSS/>
       <header className="App-header">
       

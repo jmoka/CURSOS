@@ -360,7 +360,7 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 			2- Incorporado
 			3- Classes
 
-### Inline
+### INLINE
 	- Dentro da própria tag chamamos o "style" com 2 chaves
 
 		<h1 style ={{}}>Jota Contabilidade</h1> // observe o uso das chaves
@@ -372,7 +372,7 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 		- As Palavas compostas deverão ser unida e a segunda palavra iniciar com letra maiuscula
 			ex: font-size     /   fonteSize
 			<h1 style ={{clolor:"blue", border:"solid", fonteSize:"5em"}}>Jota Contabilidade</h1>
-### Incorporado
+### INCORPORADO
 	- Dentro de export default criaremos um objeto literal contenddo todas as propriedades css daquele objeto
 	- Utilizamos Apenas uma chave para chamar o objeto
 		ex:
@@ -436,6 +436,147 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 
 
 
+
+# COMPONENTES FUNCIONAIS
+	- Bbasicamente é uma função declarada no componentee pai onde o componete filho aochamar a função do componente pai , recebe o retorno dela
+
+## Sintax Componente - Filho
+
+		import React from "react"
+
+		export default function elemento_filho ( props) {
+
+    		let num1 = 14    
+    		let num2 = 10
+
+    		return (
+       		 <>
+
+           		 <h1>"Soma e {num1} + {num2} = {props.pai_somar(num1,num2)} "</h1>
+        
+        	</>
+
+        
+    )
+
+}
+
+## Sintax Componente - Pai
+
+		import React from "react"
+		import El_Filho from './el.filho'
+
+		const somar = ( num1, num2)=>{
+    		return num1 + num2
+		}
+
+		export default function funcaoPai(){
+
+    		return(
+        	<>
+
+           		<El_Filho 
+
+           		pai_somar = {somar}
+				
+				/> 
+
+       		</>
+    	)
+	}
+
+# RENDERIZAÇÃO
+	- renderização do React acontece da segunte forma
+		- Tudo acontece no virtual-Dom, todas as mudanças feitas no virtual-ddom são passadas para o Dom , mas somente as mudanças, ou seja não carrega a pagina inteira e sim somente a mudança no elemento
+	- Para o exemplo criaremos um componenete relogio que retorna a hora atual em formato de string
+		- toda vez que a pagina atualizar vai mudar a hora
+		- vamos fazer a pagina atualizar a cada um segundo
+		- para isso é preciso usar a função interval(nome-função, intervalo)
+		- com isso a pagina no vitual dom será atualizada e o qque ouver de mudança ele passará para o Dom
+		- ou seja tuda vez que atualizar muda o segundo , e o dom virtual é atualizado e passa para o DOM
+## Sintex Componente relogio
+
+		import React from "react"
+
+		export default function relogio(){
+    		return(
+        		<>    
+        			<h1 style ={cssRelogio} >{new Date().toLocaleTimeString()}</h1>       				
+				</>
+    )
+}
+
+		- Irá  retornar a data em formato de string , e sempra irá mudar toda vez que a pagina for atualizada 	para que isso aconteça o tempo todo , a pagina ( do Virtual_Dom seja Renderizada) iremo escrever uma função la
+        no index.js para que seja renderizada a cada minuto
+
+## Sintex Componente Index.js
+	
+- Iremos criar uma função que darei o nome de Tick() , associarei ela a funçaõ nativa setInterval(tick000) 
+	função essa que atializa a pagina  e sua edita é de milisegundas, ou seja um minuto e 1000 misegundos
+		
+		function tick(){
+  				root.render(
+    				<React.StrictMode>
+      				<App />
+    				</React.StrictMode>
+  					);
+				}
+	setInterval(tick, 1000);
+	tick()
+
+// Atualiza a pagina aperte f12 e va em console , vc vai obsrevar que somente o componente relógio estará atualizando 
+// Significa o que so renderiza o que foi alterado e não a pagina toda
+
+# STATE
+	- O STATE é uma maneira de armazenar e gerenciar dados que podem ser atualizados ao longo do tempo. Cada       componente pode ter seu próprio estado interno.
+	- Quando o estado é alterado o componente e re-renderizado , o estado também é alterado e o próprio       componente e re-renderizado.
+
+	- Primeiro temos que Importar o STATE !
+
+## Sitax Importar
+	import React, {useState} from "react"
+## Sintax da STATE
+	const [nome-estado,nome-função-que-altera-estado] = useState()
+### Sintax do STATE em Componentes Funcionais
+	
+	export default function ReactFunction(){   
+  
+    let numb = 1
+    const [num, setNum] = useState(numb); //  criada a state , onde o primeiro parametro é o stado, e o segundo o nome da função que irá alterar o estado
+
+   const func = ()=>{       
+           
+        setNum(num +1)
+   		}  
+     return (
+        	<>     
+            	<h1>Variavel numb: {numb} </h1>    
+            	<h1>valor do state : {num}</h1>      
+            	<button onClick={func}>Botao </button>
+       		</>
+    	)
+	}
+
+
+
+            
+# COMPONENTES DE CLASSE
+		Componentes de classe são classes do ES6 (JavaScript) que também retornam um elemento do React. Eles:
+
+		Gerenciam o próprio estado;
+		Possuem grande nível de poder dentro da aplicação;
+		Herdam os chamados métodos de ciclo de vida do React;
+		Lidam com partes lógicas;
+		Manipulam eventos por intermédio de métodos que podem ser chamados de qualquer lugar do componente ou em seus filhos
+
+## Sintax
+
+		Class NomeObjeo extends react.Component {
+			constructor(pros){
+				super(pros)
+
+			}
+		}
 
 
 	
