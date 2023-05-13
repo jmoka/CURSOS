@@ -3,7 +3,7 @@ import React, {useState} from "react";
 
 export default function ReactFunction(){   
   
-    let numb = 1
+    let numb =12
     const [num, setNum] = useState(numb); //  criada a state , onde o primeiro parametro é o stado, e o segundo o nome da função que irá alterar o estado
 
    const func = ()=>{       

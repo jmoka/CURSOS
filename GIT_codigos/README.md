@@ -14,8 +14,7 @@
 ##### Comando específico
 	git help add
 	git help commit
-	git help <qualquer_comando_git>
-	
+	git help <qualquer_comando_git>	
 
 ## Configuração
 
@@ -507,6 +506,11 @@ Se o commit estiver com o problema, então ele deverá ser marcado como **ruim**
 Depois de encontrar o commit com problema, para retornar para o *HEAD* utilize:
 	
 	git bisect reset
+
+#### Aualizar um Repositório Local - Eliminando conflito 
+		- Atualiza as alterações feitas no Github , nas quais o seu repositório local não tem
+
+			git pull origin main
  	
 
 # Contribuições

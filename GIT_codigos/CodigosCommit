@@ -42,3 +42,6 @@ git commit --quiet
 
 # Executa uma simulação do commit sem efetivamente criar o commit:
 git commit --dry-run
+
+# Atualiza o repositório local com as Alterações feitas no repositório remoto
+git pull origin main
