@@ -98,7 +98,7 @@ obs: Cole as duas chaves
 ###5 - Aperte Criar
 	1 - Será Criado um clone do diretório do github na pasta informada 
 
-## CLONAR DO CPANEL PARA O COMPUTADOR
+# CLONAR DO CPANEL PARA O COMPUTADOR
 	1 - Acessar a conta CPANEL 
 	2 - Acesse gitVersion
 	3 - Se o repositório ja foi criado aperte em gerenciar 
