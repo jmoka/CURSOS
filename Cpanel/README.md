@@ -1,5 +1,4 @@
 # REPOSITÓRIO CPANEL
-
 # CRIAR UMA CHAVE SSH
 	1 - Acessar a conta CPANEL 
 	2 - Acesse gitVersion
@@ -8,14 +7,32 @@
 	5 - Manege SSH keys
 	
 ## Key-Name
-	Pode colocar qualquer um , por padão id_rsa
+	Pode colocar qualquer um , por padão id_rsa_cpanel
 ## Key Passwwork
 	Crie uma senha
 ## reenter Passwork
 	Confirme  senha
-
 ---- Regar Chave -------
+
+# DOWNLOADS CHAVS
+	BAIXE AS CHAVES ( PUBLICA E PRIVADA )
 	
+## LOCALIZA A PASTA .SSH NO PROMPT
+	Get-ChildItem ~/.ssh 
+	OBS: a PASTA ESTÁ LOCALIZADA EM:
+	C:\Users\USUARIO-PC\.ssh
+	
+# COLAR AS CHAVES NA PASTA
+	- Copie e as chaves na pasta  .SSH
+	
+## Mover os Arquivos para a pasta .ssh
+	mv Caminho-onde-está-as-chaves\id_rsa_cpanel ~/.ssh/
+	ex:  mv D:\ARQUIVOS-JOTA-CPANEL\id_rsa_cpanel ~/.ssh/
+obs: Cole as duas chaves
+
+## Adicione a chave SSH ao agente SSH
+	ssh-add ~/.ssh/id_rsa_cpanel
+
 
 # CRIANDO UM REPOSITÓRIO LOCAL E ENVIANDO PARA O CPANEL
 ## Comandos PowerShell
@@ -32,8 +49,9 @@
 #### Criar o Arquivo
 	echo > README.md
 
-## Commitar o Arquivo
-
+## Criar repositório o Arquivo
+	git init
+	
 ### Status
 	git status
 
@@ -43,6 +61,13 @@
 
 ### Comitar
 	git commit -m "mensagem"
+	
+## Informar a chave que será usada
+### Localizar as Chaves
+	Get-ChildItem ~/.ssh
+	
+### Informar a chave a ser usada
+	$env:GIT_SSH_COMMAND = "ssh -i ~/.ssh/nome-chave"
 
 ### Enviar - Push
 	git push origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack 
