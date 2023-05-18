@@ -104,17 +104,15 @@ obs: Cole as duas chaves
 	3 - Se o repositório ja foi criado aperte em gerenciar 
 	4 - Copie a chave CLONE URL
 ### Acesse o seu Powshell 
-	1 - navegue até a pasta qque será guardado o clone
-	2 - Digite um dos comandos:
 	 git clone --recursive chave-ssh
  	 git clone chave-ssh
-
+	 
 ---- Será criado um clone do diretório cpanel -------
 
-# TESTAR A CONEXÃO
-	 git ls-remote -h -t <chave-ssh>
+### Senha de Conexao
+	A senha é a senha do painel CPANEL
 
-# CONEXAO COM SERVIDOR CPANEL
+### CONEXAO COM SERVIDOR CPANEL
 	ssh usuario-cpanel@IP-do-servidor
 
 ## O caminho padão do servidor 
