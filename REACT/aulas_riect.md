@@ -75,6 +75,13 @@ Obs: Observe o uso do Arrow Function ( https://www.w3schools.com/js/js_arrow_fun
 		1- npm install -g create-react-app
 		2- yarn add expo
 		3- npm start 
+
+## INSTALAÇÃO TYPESCRIPT
+	npx create-react-app nome-projeto --template typescript
+### INSTAALAR AS DEPENCIAS DO TYPESCRIPT APÓS A INSTALAÇÃO DO REACT-APP
+	npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+#### Observação
+	Após a instalação das dependências do typescript é necesários renomear todos os componentes para .tsx  
 ### Node.js
 	https://nodejs.org/en/download
 	Instalar - LTS

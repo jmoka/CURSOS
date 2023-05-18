@@ -49,19 +49,23 @@ const subtrair = ()=>{
  return (
     <div className="Ap">
 
-       <Botao/>
-       <Relogio/>
-       <States/>
-       <Header/>
-       <ComponentePai/> 
-       <AulaComponentesFuncionais/> 
-       <CSS/>
+      <Header/>
       <header className="App-header">
-      
-        <img src={logo} className="App-logo" alt="logo" /> 
+      <Relogio/>
+        
+        <img src={logo} className="App-logo" alt="logo" />
         <img src={logo_J} className="App-logo" alt="logo" />
         <img src={agil} className="App-logo" alt="logo" />
-        <p>
+        
+
+        <Botao/>
+     
+       <States/>
+      
+       <ComponentePai/> 
+       <AulaComponentesFuncionais/> 
+       <CSS/> 
+       
           Edit <code>src/App.js</code> and save to reload. <br/>
           <br/> 
           Declarando das Constantes e Variáveis usando Chaves {}
@@ -78,7 +82,7 @@ const subtrair = ()=>{
            <p>{subtrair()}</p>
 
 
-        </p>
+        
         <a
           className="App-link"
           href="https://reactjs.org"

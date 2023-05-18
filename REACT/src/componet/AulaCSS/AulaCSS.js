@@ -11,7 +11,7 @@ export default function CSS (){
     return (
         <>
             <h1>APLICANDO O CSS INLINE</h1>
-            <h1 style={{color:"blue", fontSize:"5mn"}}>CSS INLINE SENDO USADO</h1>
+            <h1 style={{color:"yellow", fontSize:"5mn"}}>CSS INLINE SENDO USADO</h1>
 
             <h1>APLICANDO O CSS INCORPORADO</h1>
             <h1 style={css_incorporado}>CSS INCORPORADO SENDDO USADO</h1> 
