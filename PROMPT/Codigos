@@ -1,0 +1,5 @@
+# Renomear Todas as Pastas de um Arquivos e Trocar os Espaços em Branco Por:
+## Acessar a Pata
+  cd Caminho-da-Pasta
+## Código para Renomear
+  Get-ChildItem -Directory | Rename-Item -NewName { $_.Name -replace " ", "-" }
