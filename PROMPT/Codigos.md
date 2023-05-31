@@ -16,5 +16,6 @@
              }
 
 # Adicionar um valor ao final do nome das Pastas
-Get-ChildItem | Rename-Item -NewName { $_.Name + "_agil" }
+### Adicionar o quer adiconar entre as " "
+Get-ChildItem | Rename-Item -NewName { $_.Name + " " }
 
