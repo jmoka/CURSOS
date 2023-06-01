@@ -72,6 +72,8 @@ obs: Cole as duas chaves
 ### Enviar - Push
 	git push origin master -u --exec=/usr/local/cpanel/3rdparty/bin/git-receive-pack 
 	
+### Deletar chave da Pasta
+	Remove-Item ~/.ssh/nome_chave
 	
 # CLONAR DO GITHUB PARA O CPANEL
 ### 1 - Clonar repositório do GitHub
