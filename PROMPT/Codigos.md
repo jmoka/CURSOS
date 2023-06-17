@@ -19,3 +19,8 @@
 ### Adicionar o quer adiconar entre as " "
 Get-ChildItem | Rename-Item -NewName { $_.Name + " " }
 
+# Troca o Nome da pata e Todo o Conteudo
+## Substituie os espaços em Branco e troca por -
+  Get-ChildItem -Recurse | Rename-Item -NewName { $_.FullName -replace " ", "-" }
+
+
