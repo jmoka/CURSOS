@@ -13,20 +13,21 @@
   // const agil ='/agil.jpg';
 
 
-import logo from './logo.svg';
-import logo_J from './componet/imgs/logo_jota.jpg';
+// import logo from './logo.svg';
+// import logo_J from './componet/imgs/logo_jota.jpg';
 import Header from './componet/header'
-import Botao from './componet/botoes/btn'
-import ComponentePai from './componet/AulaPropriedades/ComponentePai'
-import AulaComponentesFuncionais from './componet/AulaComponentesFuncionais/ElPai'
-import CSS from './componet/AulaCSS/AulaCSS'
+// import Botao from './componet/botoes/btn'
+// import ComponentePai from './componet/AulaPropriedades/ComponentePai'
+// import AulaComponentesFuncionais from './componet/AulaComponentesFuncionais/ElPai'
+// import CSS from './componet/AulaCSS/AulaCSS'
 import Relogio from './componet/AulaRenderizcao/Relogio'
 
 // import React, {useState} from "react";
-import States from './componet/AulaState/State'
+import ReactFunction from './componet/AulaState/State'
 
 import './App.css';
-const agil = '/agil.jpg';
+import Imagens from './componet/imgs/caregarImagem'
+
 
 
 // // 
@@ -50,10 +51,13 @@ const subtrair = ()=>{
     <div className="Ap">
 
       <Header/>
+      <Imagens/>
+     
       <header className="App-header">
       <Relogio/>
+      <ReactFunction/>
         
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" />
         <img src={logo_J} className="App-logo" alt="logo" />
         <img src={agil} className="App-logo" alt="logo" />
         
@@ -64,7 +68,7 @@ const subtrair = ()=>{
       
        <ComponentePai/> 
        <AulaComponentesFuncionais/> 
-       <CSS/> 
+       <CSS/>  */}
        
           Edit <code>src/App.js</code> and save to reload. <br/>
           <br/> 
