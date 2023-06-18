@@ -23,4 +23,11 @@ Get-ChildItem | Rename-Item -NewName { $_.Name + " " }
 ## Substituie os espaços em Branco e troca por -
   Get-ChildItem -Recurse | Rename-Item -NewName { $_.FullName -replace " ", "-" }
 
+# Substitui os Espaços em Brano "-", retira todos os acentos e "Ç",^, ~" das Pastas , Subpastas e Arquivos.
+  Get-ChildItem -Recurse | ForEach-Object {
+    $newName = $_.Name.Normalize('FormD') -replace '[^a-zA-Z0-9.-]', '' -replace ' ', '-'
+    $newPath = Join-Path -Path $_.DirectoryName -ChildPath $newName
+    Rename-Item -Path $_.FullName -NewName $newName -Force
+}
+
 
