@@ -37,7 +37,9 @@ obs: Cole as duas chaves
  
 ## Remover o repositorio remoto
 	git push origin master
-
+## adicionar o Branch no rastreamento
+	git branch --set-upstream-to=origin/master master
+ 
 # CRIANDO UM REPOSITÓRIO LOCAL E ENVIANDO PARA O CPANEL
 ## Comandos PowerShell
 ### Navegue até o diretorio em seu computador que será usada para criar a pasta
