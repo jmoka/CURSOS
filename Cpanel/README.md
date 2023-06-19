@@ -15,8 +15,7 @@
 ---- Regar Chave -------
 
 # DOWNLOADS CHAVS
-	BAIXE AS CHAVES ( PUBLICA E PRIVADA )
-	
+	BAIXE AS CHAVES ( PUBLICA E PRIVADA )	
 ## LOCALIZA A PASTA .SSH NO PROMPT
 	Get-ChildItem ~/.ssh 
 	OBS: a PASTA ESTÁ LOCALIZADA EM:
@@ -33,6 +32,11 @@ obs: Cole as duas chaves
 ## Adicione a chave SSH ao agente SSH
 	ssh-add ~/.ssh/id_rsa_cpanel
 
+## Adicionar o repositório remoto "origin" usando a URL fornecida,
+	git remote add origin ssh://....
+ 
+## Remover o repositorio remoto
+	git push origin master
 
 # CRIANDO UM REPOSITÓRIO LOCAL E ENVIANDO PARA O CPANEL
 ## Comandos PowerShell
