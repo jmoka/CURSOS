@@ -283,3 +283,16 @@ module.exports = {
 
 
 
+## Tags
+### Texte
+	<Text> (Texto):
+	O componente <Text> é usado para exibir texto na interface do aplicativo. Pode ser usado para exibir títulos, parágrafos, rótulos e outros tipos de texto.
+
+	Exemplo:   <Text>Olá, mundo!</Text>
+
+### View
+
+	<View> (Visualização):
+	O componente <View> é usado como um contêiner flexível que pode agrupar outros componentes ou ser estilizado para criar layouts personalizados.
+
+	Exemplo: <View style={{ flex: 1, backgroundColor: 'red' }}></View>

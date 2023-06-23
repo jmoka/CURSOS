@@ -6,4 +6,9 @@ module.exports = {
   trailingComma: 'all',
   arrowParens: 'avoid',
   printWitdh: 80,
+
+},
+{
+  "singleQuote": true,
+  "trailingComma": "all"
 };

@@ -1,114 +1,37 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {View} from 'react-native';
+// import Texto from './src/componentes/tags/text';
+// import Container from './src/componentes/tags/view';
+// import Imagem from './src/componentes/tags/imagem';
+// import Input from './src/componentes/tags/input';
+// import Scrol from './src/componentes/tags/ScrollView';
+// import Botao from './src/componentes/tags/Botao';
+// import Lista from './src/componentes/tags/Lista';
+// import ComponenteFuncao from './src/componentes/funcionais/componenteFuncional';
+// import ComponenteFuncao2 from './src/componentes/funcionais/componenteFuncional2';
+// import ComponenteClasse from './src/componentes/classes/componenteClasse';
+import TextInput from './src/componentes/inputs/textInput'
+// import Home from './src/App/Home';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+// prettier-ignore
+export default function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    <View style={{flex:1}}>
+      {/*<Text>HELLO WORLD</Text>
+       <Texto/>
+      <Container/>
+      <Imagem/>
+      <Input/>
+      <Scrol/>
+      <Botao/>
+      <Lista/>
+      <ComponenteFuncao2/>
+      <ComponenteFuncao/>
+      <ComponenteClasse/>
+       <Home/>
+        */}
+      <TextInput/>
+
     </View>
   );
 }
-
-function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="teste">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Rjjjjjjjjjjjjjjjjjjjjjjjjjjjjj[]:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;
