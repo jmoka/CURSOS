@@ -5,7 +5,7 @@ const StyleComponente = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <Text style={styles.buttonText}> Olá Dev Jota </Text>
-        <TextInput style={styles.inputs}/>
+        <TextInput style={styles.inputs} />
       </View>
     </SafeAreaView>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Text,
   Platform,
+  TouchableOpacity,
   TextInput,
   View,
   StyleSheet,
@@ -11,8 +12,11 @@ const StyleComponente = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
-        <Text style={styles.buttonText}> Olá Dev Jota </Text>
+        <Text style={styles.Text}>Olá Dev</Text>
         <TextInput style={styles.inputs} />
+        <TouchableOpacity style={styles.button} activeOpacity={0.3}>
+          <Text style={styles.buttonText}>Adicionar</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -21,9 +25,14 @@ export default StyleComponente;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: 'pink', // Cinza claro padrão comercial
+    backgroundColor: '#1A120B', // Cinza claro padrão comercial
     padding: 16,
     borderRadius: 8,
+  },
+  Text:{
+    color: '#f1f1f1', // Branco padrão comercial
+    fontSize: 24,
+    fontWeight: 'bold',
   },
   container: {
     flex: 1,
@@ -31,24 +40,25 @@ const styles = StyleSheet.create({
     paddingVertical: 50,
   },
   button: {
-    backgroundColor: '#007AFF', // Azul padrão comercial
+    backgroundColor: '#FFD93D', // Azul padrão comercial
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderRadius: 4,
+    borderRadius: 6,
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 10,
   },
   buttonText: {
-    color: '#f1f1f1', // Branco padrão comercial
+    color: '#1A120B', // Branco padrão comercial
     fontSize: 24,
     fontWeight: 'bold',
   },
   inputs: {
-    backgroundColor: '#29292e',
+    backgroundColor: '#3C2A21',
     color: '#f1f1f1',
     fontSize: 18,
-    padding: Platform.OS == 'ios' ? 15 : 10, // podenddo fazer essa ferificação em qualquer componente
+    padding: Platform.OS == 'ios' ? 15 : 12, // podenddo fazer essa ferificação em qualquer componente
     marginTop: 10,
-    borderRadius: 15,
+    borderRadius: 6,
   },
 });
