@@ -1,6 +1,6 @@
 import React from 'react';
 import Estilos from '../App/estilo/eexterno';
-import { Text, Platform, TouchableOpacity, TextInput, View, StyleSheet, SafeAreaView } from 'react-native';
+import { Text, Platform, TouchableOpacity, TextInput, View, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Titulo from '../App/componentes/titulos';
 import Sub_Titulo from '../App/componentes/titulos';
 import InputComponent from '../App/componentes/input';
@@ -29,6 +29,19 @@ const HookState = () => {
     setTarefas(novasTarefas);
   };
 
+  const editarTarefa = (id: string, novoTitulo: string) => {
+    const tarefasAtualizadas = tarefas.map(tarefa => {
+      if (tarefa.id === id) {
+        return { ...tarefa, titulo: novoTitulo };
+      }
+      return tarefa;
+    });
+    setTarefas(tarefasAtualizadas);
+  };
+
+
+
+
   return (
     <SafeAreaView style={Estilos.fundo}>
       <View>
@@ -36,7 +49,9 @@ const HookState = () => {
         <InputComponent novaTarefa={novaTarefa} setNovaTarefa={setNovaTarefa} />
         <BotaoAdiconar adicionarTarefa={adicionarTarefa}/>
         <Sub_Titulo/>
-        <Lista deletarTarefa={deletarTarefa} tarefas={tarefas}/>
+
+        <Lista deletarTarefa={deletarTarefa} tarefas={tarefas} editarTarefa={editarTarefa}/>
+
         <Text style={{ color: '#f1f1f1' }}>{novaTarefa}</Text>
       </View>
     </SafeAreaView>

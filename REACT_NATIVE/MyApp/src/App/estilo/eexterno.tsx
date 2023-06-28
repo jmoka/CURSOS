@@ -16,7 +16,7 @@ export default StyleSheet.create({
     backgroundColor: '#A27B', // Cinza claro padrão comercial
     marginTop: 10,
     paddingStart: 10,
-    height: 100,
+    height: 150,
   },
   buttonAlinhar: {
     flexDirection: 'row',
@@ -33,14 +33,14 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
     marginBottom: 20,
-    height: 45,
+    height: 60,
   },
   button: {
     backgroundColor: '#FFD93D', // Amarelo padrão comercial
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 6,
-    height: 45,
+    height: 60,
     alignItems: 'center',
   },
   buttonText: {
@@ -54,6 +54,9 @@ export default StyleSheet.create({
   buttonBlue: {
     backgroundColor: 'blue',
   },
+  buttonGreen:{
+    backgroundColor: 'green',
+  },
   inputs: {
     backgroundColor: '#3C2A21',
     color: '#f1f1f1',
@@ -62,5 +65,19 @@ export default StyleSheet.create({
     marginTop: 10,
     borderRadius: 6,
   },
+  inputsEditar: {
+    backgroundColor: '#f1f1f1',
+    color: '#1A120B',
+    fontSize: 18,
+    padding: Platform.OS === 'ios' ? 15 : 12,
+    marginTop: 10,
+    borderRadius: 6,
+    width: '100%',
+  },
+  containerEditar :{
+    backgroundColor: '#f1f1f1',
+    width: 100,
+  }
 })
+
 
