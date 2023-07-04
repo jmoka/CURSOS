@@ -31,7 +31,11 @@ obs: Cole as duas chaves
 
 ## Adicione a chave SSH ao agente SSH
 	ssh-add ~/.ssh/id_rsa_cpanel
-
+# Adicionar um novo controle remoto (remote) 
+## Execute o seguinte comando para remover o controle remoto existente chamado "origin"
+	git remote remove origin
+ ## Em seguida, adicione o novo controle remoto com o comando git remote add. Certifique-se de substituir <URL_DO_REPOSITÓRIO> pelo 	caminho correto para o seu repositório:
+ 	git remote add origin <URL_DO_REPOSITÓRIO>  
 ## Adicionar o repositório remoto "origin" usando a URL fornecida,
 	git remote add origin ssh://....
  
