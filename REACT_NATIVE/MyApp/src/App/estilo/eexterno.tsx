@@ -13,16 +13,17 @@ export default StyleSheet.create({
     fontWeight: 'bold',
   },
   safeArea: {
-    backgroundColor: '#A27B', // Cinza claro padrão comercial
+    backgroundColor: '#', // Cinza claro padrão comercial
     marginTop: 10,
     paddingStart: 10,
     height: 150,
   },
   buttonAlinhar: {
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-evenly',
     alignItems: 'flex-end',
-    marginTop: 15,
+    marginTop: 20,
+    height: '100%',
   },
   buttonAdicionar: {
     backgroundColor: '#FFD93D', // Amarelo padrão comercial
@@ -40,8 +41,10 @@ export default StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 6,
-    height: 60,
+    height: '70%',
     alignItems: 'center',
+    width: '100%',
+    margin: 2,
   },
   buttonText: {
     color: '#1A120B', // Branco padrão comercial
@@ -75,8 +78,12 @@ export default StyleSheet.create({
     width: '100%',
   },
   containerEditar :{
-    backgroundColor: '#f1f1f1',
-    width: 100,
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'flex-end',
+    margin: 20,
+    height: '90%'
+
   }
 })
 

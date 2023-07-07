@@ -1,8 +1,8 @@
 import React from "react";
 import { FlatList, Text, View } from 'react-native';
 import Estilos from '../estilo/eexterno';
-import BotaoDeletar from '../componentes/botaoDeletar';
-import BotaoEditar from '../componentes/botaoEditar';
+import BotaoDeletar from './botaoDeletar';
+import ListaEditar from './listaEditar';
 
 interface Props {
   tarefas: Tarefa[];
@@ -16,12 +16,14 @@ const Lista: React.FC<Props> = (props) =>  (
     keyExtractor={item => item.id}
     renderItem={({ item }) => (
       <View key={item.id} style={Estilos.safeArea}>
+        <View style={{backgroundColor:"black"}}>
         <Text style={Estilos.Text}>{item.titulo}</Text>
+        </View>
         <View style={Estilos.buttonAlinhar}>
           <View style={Estilos.buttonContainer}>
             <BotaoDeletar deletarTarefa={props.deletarTarefa} tarefa={item} />
           </View>
-          <BotaoEditar editarTarefa={props.editarTarefa} tarefa={item} />
+          <ListaEditar editarTarefa={props.editarTarefa} tarefa={item} BotaoAdiconar={props.BotaoAdiconar} BotaoDeletar={BotaoDeletar} />
         </View>
       </View>
     )}
@@ -29,4 +31,3 @@ const Lista: React.FC<Props> = (props) =>  (
 );
 
 export default Lista;
-

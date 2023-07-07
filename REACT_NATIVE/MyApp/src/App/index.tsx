@@ -38,10 +38,6 @@ const HookState = () => {
     });
     setTarefas(tarefasAtualizadas);
   };
-
-
-
-
   return (
     <SafeAreaView style={Estilos.fundo}>
       <View>
@@ -52,7 +48,6 @@ const HookState = () => {
 
         <Lista deletarTarefa={deletarTarefa} tarefas={tarefas} editarTarefa={editarTarefa}/>
 
-        <Text style={{ color: '#f1f1f1' }}>{novaTarefa}</Text>
       </View>
     </SafeAreaView>
   );

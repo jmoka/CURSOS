@@ -5,7 +5,6 @@ import {TextInput} from 'react-native';
 const Inputcomponent = (props) => {
   return (
     <TextInput
-      id='inputId'
       value={props.novaTarefa}
       onChangeText={props.setNovaTarefa}
       placeholderTextColor='#E5E5CB'

@@ -16,7 +16,7 @@ export default StyleComponente;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: 'pink', // Cinza claro padrão comercial
+    backgroundColor: ' <View>  </View>', // Cinza claro padrão comercial
     padding: 16,
     borderRadius: 8,
   },
