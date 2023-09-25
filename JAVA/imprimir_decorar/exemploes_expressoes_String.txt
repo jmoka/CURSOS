@@ -1,0 +1,70 @@
+Formatar:
+
+java
+Copy code
+String original = "  Exemplo de Texto  ";
+String lowercase = original.toLowerCase(); // "exemplo de texto"
+String uppercase = original.toUpperCase(); // "EXEMPLO DE TEXTO"
+String trimmed = original.trim(); // "Exemplo de Texto"
+Recortar:
+
+java
+Copy code
+String text = "Hello, World!";
+String sub1 = text.substring(7); // "World!"
+String sub2 = text.substring(0, 5); // "Hello"
+Substituir:
+
+java
+Copy code
+String original = "Hello, World!";
+String replaced1 = original.replace('o', 'x'); // "Hellx, Wxrld!"
+String replaced2 = original.replace("Hello", "Hi"); // "Hi, World!"
+Buscar:
+
+
+String text = "Hello, World!";
+int index1 = text.indexOf('o'); // 4
+int index2 = text.lastIndexOf('o'); // 8
+int index3 = text.indexOf("World"); // 7
+int index4 = text.lastIndexOf("World"); // 7
+
+
+Dividir:
+
+String sentence = "Java programming is fun!";
+String[] words = sentence.split(" "); // ["Java", "programming", "is", "fun!"]
+
+
+Outros:
+
+String text = "Hello, World!";
+int length = text.length(); // 13
+boolean isEmpty = text.isEmpty(); // false
+char charAtIndex = text.charAt(7); // 'W'
+boolean contains = text.contains("World"); // true
+boolean startsWith = text.startsWith("Hello"); // true
+boolean endsWith = text.endsWith("World!"); // true
+Formatação de Strings:
+
+String formatted = String.format("The value of pi is approximately %.2f", Math.PI); // "The value of pi is approximately 3.14"
+
+
+Conversão:
+
+int number = 42;
+String numberStr = String.valueOf(number); // "42"
+String intStr = Integer.toString(123); // "123"
+String doubleStr = Double.toString(3.14159); // "3.14159"
+
+
+Espaços em Branco:
+
+
+String repeated = "abc".repeat(3); // "abcabcabc"
+String indented = "Hello\nWorld".indent(4); // "    Hello\n    World"
+Comparação:
+
+String str1 = "Hello";
+String str2 = "hello";
+boolean areEqual = str1.equals(str2); // false

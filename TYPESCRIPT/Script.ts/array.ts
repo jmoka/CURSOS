@@ -14,8 +14,14 @@ interface TIPIFICANDO {
     autor_livro : string;
 };
 
+//todos: FORMAS DE DECLARAR ARRAY
 
-const Livros: TIPIFICANDO[]=[
+// let Livros: Object[]=[];
+let Livros: Array<TIPIFICANDO>=[];
+
+
+
+Livros=[
 
     {   
         id:1,
@@ -42,3 +48,26 @@ Livros.push(
 )
 
 console.log(Livros)
+
+
+
+
+/* 
+Usando a notação de colchetes:
+
+let array: any[] = []; // Array vazio
+let array: number[] = [1, 2, 3]; // Array de números
+let array: string[] = ["a", "b", "c"]; // Array de strings
+
+*/
+
+/*
+Usando a interface Array<T>:
+
+let array: Array<any> = []; // Array vazio
+let array: Array<number> = [1, 2, 3]; // Array de números
+let array: Array<string> = ["a", "b", "c"]; // Array de strings
+*/
+
+
+

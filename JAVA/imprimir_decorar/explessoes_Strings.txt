@@ -1,0 +1,53 @@
+Certamente! Aqui estão mais 30 funções e métodos em Java, divididos em diferentes categorias, como formatação, manipulação de strings e busca:
+
+**Formatar:**
+1. **String.toLowerCase()**: Converte a string para letras minúsculas.
+2. **String.toUpperCase()**: Converte a string para letras maiúsculas.
+3. **String.trim()**: Remove os espaços em branco do início e do final da string.
+
+**Recortar:**
+4. **String.substring(int beginIndex)**: Retorna uma parte da string a partir do índice especificado até o final.
+5. **String.substring(int beginIndex, int endIndex)**: Retorna uma parte da string entre os índices especificados.
+
+**Substituir:**
+6. **String.replace(char oldChar, char newChar)**: Substitui todas as ocorrências de um caractere por outro na string.
+7. **String.replace(CharSequence target, CharSequence replacement)**: Substitui todas as ocorrências de uma sequência por outra na string.
+
+**Buscar:**
+8. **String.indexOf(int ch)**: Retorna o índice da primeira ocorrência de um caractere na string.
+9. **String.indexOf(int ch, int fromIndex)**: Retorna o índice da primeira ocorrência de um caractere na string, a partir do índice especificado.
+10. **String.lastIndexOf(int ch)**: Retorna o índice da última ocorrência de um caractere na string.
+11. **String.lastIndexOf(int ch, int fromIndex)**: Retorna o índice da última ocorrência de um caractere na string, até o índice especificado.
+12. **String.indexOf(String str)**: Retorna o índice da primeira ocorrência da substring na string.
+13. **String.indexOf(String str, int fromIndex)**: Retorna o índice da primeira ocorrência da substring na string, a partir do índice especificado.
+14. **String.lastIndexOf(String str)**: Retorna o índice da última ocorrência da substring na string.
+15. **String.lastIndexOf(String str, int fromIndex)**: Retorna o índice da última ocorrência da substring na string, até o índice especificado.
+
+**Dividir:**
+16. **String.split(String regex)**: Divide a string em partes usando uma expressão regular como delimitador.
+
+**Outros:**
+17. **String.length()**: Retorna o comprimento da string.
+18. **String.isEmpty()**: Verifica se a string está vazia.
+19. **String.charAt(int index)**: Retorna o caractere na posição especificada.
+20. **String.contains(CharSequence sequence)**: Verifica se a string contém uma sequência especificada.
+21. **String.startsWith(String prefix)**: Verifica se a string começa com o prefixo especificado.
+22. **String.endsWith(String suffix)**: Verifica se a string termina com o sufixo especificado.
+23. **String.join(CharSequence delimiter, CharSequence... elements)**: Combina elementos em uma string usando um delimitador.
+
+**Formatação de Strings:**
+24. **String.format(String format, Object... args)**: Formata uma string usando argumentos formatados.
+
+**Conversão:**
+25. **String.valueOf(boolean/int/float/...)**: Converte tipos primitivos em strings.
+26. **Integer.toString(int value)**: Converte um valor inteiro em uma string.
+27. **Double.toString(double value)**: Converte um valor double em uma string.
+
+**Espaços em Branco:**
+28. **String.repeat(int count)**: Repete a string um número especificado de vezes.
+29. **String.indent(int n)**: Indenta cada linha da string por um número especificado de espaços.
+
+**Comparação:**
+30. **String.equals(Object another)**: Verifica se a string é igual a outra string (sensível a maiúsculas/minúsculas).
+
+Esses são mais exemplos de funções e métodos em Java que você pode usar para manipular e operar com strings de diferentes maneiras.

@@ -5,6 +5,7 @@
 // IMPORTANTE INICIAR COM LETRA MAIUSCULA
 class NomeClasse{
     // MÉTODO CONSTRUTOR
+    
     constructor(nome, idade, altura){
         this.nome=nome
         this.idade=idade

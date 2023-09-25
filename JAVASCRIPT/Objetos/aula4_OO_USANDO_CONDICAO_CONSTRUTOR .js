@@ -8,6 +8,9 @@
 //! PODEMOS TAMBÉM DECLARAR CONDIÇÕES NO CONSTRUTOR
 
 class NomeClasse{
+    nome;
+    idade;
+    altura;
     // MÉTODO CONSTRUTOR
     constructor(nome, idade, altura){
         this.nome=nome

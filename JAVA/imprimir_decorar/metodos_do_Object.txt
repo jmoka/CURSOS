@@ -1,0 +1,53 @@
+Certamente! Aqui estão 30 métodos e funções relacionados aos objetos em Java, incluindo os métodos mencionados por você, juntamente com outros métodos úteis:
+
+**Métodos Principais:**
+1. **getClass()**: Retorna o tipo da classe do objeto.
+2. **equals(Object obj)**: Compara se o objeto é igual a outro objeto.
+3. **hashCode()**: Retorna um código hash do objeto.
+4. **toString()**: Converte o objeto para uma representação de string.
+
+**Conversão de Tipos:**
+5. **instanceof**: Verifica se um objeto é uma instância de uma determinada classe.
+6. **getClass().getName()**: Retorna o nome completo da classe do objeto como uma string.
+7. **getClass().getSimpleName()**: Retorna o nome simples da classe do objeto como uma string.
+8. **getClass().getSuperclass()**: Retorna a classe pai (superclasse) do objeto.
+
+**Clonagem:**
+9. **clone()**: Cria uma cópia superficial (shallow copy) do objeto.
+10. **System.identityHashCode(obj)**: Retorna um código hash exclusivo do objeto.
+
+**Notificação e Sincronização:**
+11. **wait()**: Coloca a thread atual em espera até que outro thread notifique.
+12. **notify()**: Acorda um thread em espera no mesmo objeto.
+13. **notifyAll()**: Acorda todos os threads em espera no mesmo objeto.
+
+**Gerenciamento de Memória:**
+14. **finalize()**: É chamado pelo garbage collector antes de liberar o objeto da memória.
+
+**Enumerações:**
+15. **Enum.valueOf(Class enumType, String name)**: Obtém uma instância de uma enumeração pelo nome.
+16. **Enum.values()**: Retorna um array de todas as constantes de uma enumeração.
+
+**Classe Object (superclasse de todas as classes):**
+17. **getClass().getDeclaredFields()**: Retorna um array de campos da classe.
+18. **getClass().getMethods()**: Retorna um array de métodos públicos da classe.
+19. **getClass().getConstructors()**: Retorna um array de construtores da classe.
+20. **getClass().getDeclaredMethods()**: Retorna um array de todos os métodos da classe.
+21. **getClass().getDeclaredConstructors()**: Retorna um array de todos os construtores da classe.
+
+**Outros:**
+22. **System.identityHashCode(Object x)**: Retorna um código hash do objeto, independente da implementação do método hashCode.
+23. **System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)**: Copia um array de origem para um array de destino.
+
+**Métodos de Classe:**
+24. **Object.requireNonNull(T obj)**: Lança uma exceção se o objeto fornecido for nulo.
+25. **Objects.equals(Object a, Object b)**: Compara dois objetos para igualdade, considerando a possibilidade de valores nulos.
+26. **Objects.isNull(Object obj)**: Verifica se um objeto é nulo.
+27. **Objects.nonNull(Object obj)**: Verifica se um objeto não é nulo.
+
+**Métodos de Comparação:**
+28. **compareTo(T other)**: Comparação natural entre objetos.
+29. **Comparator.comparing(Function keyExtractor)**: Cria um comparador com base em um extrator de chave.
+30. **Comparator.naturalOrder()**: Cria um comparador para ordem natural.
+
+Esses métodos e funções estão relacionados ao gerenciamento, manipulação e interação com objetos em Java, tornando a programação mais eficiente e organizada.

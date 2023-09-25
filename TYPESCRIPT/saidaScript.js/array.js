@@ -2,7 +2,8 @@
 const tipos_listados = ["joão", 26, "rua coronel josé do ó"];
 console.log(tipos_listados);
 ;
-const Livros = [
+let Livros = [];
+Livros = [
     {
         id: 1,
         nome_livro: "Livro Nome1",

@@ -1,0 +1,21 @@
+package controlar_casas_decimais;
+
+public class controlar_casas_decimais {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 32;
+		double num1 = 2.78965;
+		
+		double soma = num + num1;
+		
+		System.out.printf("A soma de %d e %.2f e %.3f", num, num1, soma);
+		
+		
+
+	}
+
+}
+
+// observe que usamos para controlar casas decimais o %f onde formata o ponto flutaante e e controlado pela quantidade de casas decimais a´pós %
+// %.5f

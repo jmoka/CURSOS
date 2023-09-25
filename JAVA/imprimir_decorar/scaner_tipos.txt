@@ -1,0 +1,37 @@
+Locale.setDefault(Locale.US); // declara a localidade , para a adoção da pontuação na matematica
+
+		Scanner sc = new Scanner(System.in); 
+		
+		char c;
+		String x;
+		int y;
+		double d;
+		
+		//Para ler um caracter passando o index
+		c = sc.next().charAt(1);
+		System.out.println("Char declarada: " + c);
+
+		// Para ler somente um texto continuo, ou a primeira palavra de um texto
+		System.out.println("Informe um texto Simples");
+		x = sc.next();
+		System.out.printf("Nome Simples informado foi:  %s", x); // formatando a strif com o printf
+		System.out.println(); // quebrando a linha	
+		System.out.println("Informe um texto Composto");
+		sc.nextLine(); // sempre que vier de um putro scaner que não seja nextLine, para aproveitar a
+						// querbra de linha faltante
+		x = sc.nextLine(); // Para ler textos quebrando linha
+		System.out.println("Nome Composto Informado foi: " + x); // formatando com a concatenação
+
+		// Usando nextInt para numeros
+		System.out.println("Informe um numero inteiro");
+		y = sc.nextInt();
+		System.out.printf("O numero informado foi: %d", y);
+		System.out.println();
+
+		// Usando nextDouble para numeros flutuantes
+		System.out.println("infome um numero com casas decimais");
+		d = sc.nextDouble();
+		System.out.println("O numero informado foi: " + d);
+
+		sc.close();
+	}

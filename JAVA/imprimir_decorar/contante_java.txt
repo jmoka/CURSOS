@@ -1,0 +1,10 @@
+CONSTANTES EM JAVA
+
+AS CONATANTES EM JAVA POSSUEM ALGUMAS CRACTERISTICAS
+
+EX:
+
+public static finali double NOME_CONTANTE =
+
+para ser conatante onde seu valor não vai mudar, deve-se usar a palavra finali e o nome tem caixa alta
+e com anderline se tiver palavras compostas

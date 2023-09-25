@@ -1,0 +1,34 @@
+Claro! Aqui estão 30 funções ou métodos em Java, juntamente com suas descrições, que correspondem a operações matemáticas e outras operações úteis:
+
+1. **Math.sqrt(double a)**: Retorna a raiz quadrada de um número.
+2. **Math.pow(double base, double exponent)**: Retorna a base elevada ao expoente.
+3. **Math.abs(int/double a)**: Retorna o valor absoluto de um número.
+4. **Math.round(float/double a)**: Arredonda um número para o valor inteiro mais próximo.
+5. **Math.ceil(double a)**: Arredonda um número para cima, retornando o próximo inteiro maior ou igual.
+6. **Math.floor(double a)**: Arredonda um número para baixo, retornando o próximo inteiro menor ou igual.
+7. **Math.max(a, b)**: Retorna o maior valor entre dois números.
+8. **Math.min(a, b)**: Retorna o menor valor entre dois números.
+9. **Math.random()**: Retorna um número pseudoaleatório entre 0 (inclusive) e 1 (exclusivo).
+10. **Math.exp(double a)**: Retorna a constante e elevada a um número.
+11. **Math.log(double a)**: Retorna o logaritmo natural de um número.
+12. **Math.sin(double a)**: Retorna o seno de um ângulo em radianos.
+13. **Math.cos(double a)**: Retorna o cosseno de um ângulo em radianos.
+14. **Math.tan(double a)**: Retorna a tangente de um ângulo em radianos.
+15. **Math.atan(double a)**: Retorna a tangente inversa de um número.
+16. **Math.toRadians(double degrees)**: Converte graus para radianos.
+17. **Math.toDegrees(double radians)**: Converte radianos para graus.
+18. **Math.PI**: Constante que representa o número Pi (3.14159265...).
+19. **String.length()**: Retorna o comprimento de uma string.
+20. **String.charAt(int index)**: Retorna o caractere em uma posição específica da string.
+21. **String.toUpperCase()**: Retorna uma cópia da string em letras maiúsculas.
+22. **String.toLowerCase()**: Retorna uma cópia da string em letras minúsculas.
+23. **String.trim()**: Retorna uma cópia da string sem espaços em branco no início ou no final.
+24. **String.substring(int beginIndex, int endIndex)**: Retorna uma parte da string entre os índices especificados.
+25. **String.contains(String substring)**: Verifica se a string contém uma determinada subtring.
+26. **String.replace(char oldChar, char newChar)**: Substitui todas as ocorrências de um caractere por outro na string.
+27. **String.split(String regex)**: Divide a string em partes usando uma expressão regular como delimitador.
+28. **String.valueOf(int/double/...)**: Converte tipos primitivos em strings.
+29. **System.out.println(String message)**: Imprime uma mensagem na saída padrão (console) e pula para a próxima linha.
+30. **Scanner.nextLine()**: Lê uma linha de entrada do usuário.
+
+Essas são apenas algumas das muitas funções e métodos úteis disponíveis na linguagem de programação Java. Cada uma delas pode ser utilizada para realizar diferentes operações em seus programas.
