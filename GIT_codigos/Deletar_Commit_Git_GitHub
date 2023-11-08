@@ -1,0 +1,43 @@
+# Excluir um Commit específico do Git e GitHub
+
+## Lista de Commits
+### 1- git log --oneline
+  > Vai aparecer o seguinte: uma lista de commites feitos
+
+        2155c3f (HEAD -> main) Criação DB.Teste e Db.Execption, e Testando conexao com o banco
+        384943a recuperar valor digitado
+        b2cf131 criação da tela de login usando css e bootstrap
+        2d05179 Projeto criado , estrutura e pastas criado
+
+## Abrir o Editor
+### 2- git rebase -i HEAD~ (informar a quantidade de commits)
+    ex: Na lista Acima tem o commit main e mais 3 sem contar com o main
+
+          git rebase -i HEAD~3
+
+## Deletar o Commit
+### 3- Apagar a linha do commit que deseja
+
+      O procedimento é apagar um commite ou mais de um, apenas apagar a linha do commit
+
+## Sair do Editor e Salvar
+### 4- Esc:wq
+
+      Ao final da tela no comando digite 
+
+       Esc:wq     -  Para sair e salvar
+
+# Sair do Editor sem salvar
+### 5- :wq
+
+## Fez uma Alteração e vai entrar no editor novamente
+### 6- O editor por estar em edição irá pedir as seguintes opções
+
+      git rebase (--continue | --abort | --skip)
+
+## Enviar para o GitHub e Forçar as alterações e a deleção
+### 7-git push origin main --force
+
+
+          
+    
