@@ -78,7 +78,7 @@ C:\Program Files\Java\jdk-20
 
 ### Na mesma janela de variáveis de ambiente precisamos incluir quatro configurações na variável Path já existente. Selecione a variável Path na lista inferior e clique no botão Editar.... Na tela de edição, clique no botão Novo para informar a configuração abaixo, porém uma por linha:
 
-%ANDROID_HOME%\emulator
+%ANDROID_HOME%\emulator <br>
 %ANDROID_HOME%\tools
 %ANDROID_HOME%\tools\bin
 %ANDROID_HOME%\platform-tools
